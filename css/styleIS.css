@@ -52,7 +52,7 @@ form .username {
 
 .username label {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 9px;
   color: #adadad;
   transform: translateY(-50%);
@@ -126,3 +126,4 @@ input[type="submit"]:hover {
 .registrarse a:hover {
   text-decoration: underline;
 }
+
