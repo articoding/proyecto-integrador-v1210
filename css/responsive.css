@@ -156,7 +156,7 @@
         width: 100%;
     }
     .navigation .navbar-collapse {
-        background: #393939;
+        background: #1bb8bd;
         padding: 20px;
         margin-top: 56px;
         position: absolute;
@@ -171,14 +171,14 @@
     .navigation.navbar-dark .navbar-nav .nav-link:focus,
     .navigation.navbar-dark .navbar-nav .nav-link:hover {
         background-color: transparent;
-         color: #fa8c17;
+         color: #000000;
     }
     .navigation.navbar-dark .navbar-nav .active>.nav-link,
     .navigation.navbar-dark .navbar-nav .nav-link.active,
     .navigation.navbar-dark .navbar-nav .nav-link.show,
     .navigation.navbar-dark .navbar-nav .show>.nav-link {
         background-color: transparent;
-        color: #fa8c17;
+        color: #868d90;
     }
     .navigation.navbar-dark .navbar-toggler {
         border: inherit;
@@ -265,7 +265,7 @@
         width: 100%;
     }
     .navigation .navbar-collapse {
-        background: #393939;
+        background: #1bb8bd;
         padding: 20px;
         margin-top: 24px;
         position: absolute;
@@ -285,14 +285,14 @@
     .navigation.navbar-dark .navbar-nav .nav-link:focus,
     .navigation.navbar-dark .navbar-nav .nav-link:hover {
         background-color: transparent;
-        color: #fa8c17;
+        color: #868d90;
     }
     .navigation.navbar-dark .navbar-nav .active>.nav-link,
     .navigation.navbar-dark .navbar-nav .nav-link.active,
     .navigation.navbar-dark .navbar-nav .nav-link.show,
     .navigation.navbar-dark .navbar-nav .show>.nav-link {
         background-color: transparent;
-        color: #fa8c17;
+        color: #868d90;
     }
     .navigation.navbar-dark .navbar-toggler-icon {
         background: url(../images/menu_icon.png);
