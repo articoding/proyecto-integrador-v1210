@@ -326,14 +326,14 @@ ul.social_icon li a {
      border-radius: 30px;
      margin: 0 3px;
      color: #fff;
-     background-color: #000000;
+     background-color: #111111;
      width: 32px;
      height: 32px;
 }
 
 ul.social_icon li a:hover {
      color: #fff;
-     background-color: #fa8c17;
+     background-color: #1bb8bd;
 }
 
 
@@ -388,7 +388,7 @@ ul.social_icon li a:hover {
 }
 
 .get_btn:hover {
-     color: #fa8c17;
+     color: black ;
 }
 
 .bann_img {
@@ -473,7 +473,7 @@ ul.social_icon li a:hover {
 }
 
 .read_more:hover {
-     background: #fa8c17;
+     background: #1bb8bd;
      color: #fff;
      transition: ease-in all 0.5s;
 }
