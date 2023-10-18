@@ -135,7 +135,7 @@ p {
      margin: 0px;
      font-weight: 400;
      color: #2e2d2d;
-     font-size: 17px;
+     font-size: 16px;
      line-height: 24px;
 }
 
@@ -262,17 +262,17 @@ button {
 
 .logo a img {
      z-index: 9999;
-     position: relative;
+     position: absolute;
 }
 
 .logo::before {
      position: absolute;
      content: "";
      background-color: none;
-     width: 385px;
-     height: 86px;
-     left: -75px;
-     top: -24px;
+     max-width: 100%;
+     height: auto;
+     left: 0;
+     top: 0;
 }
 
 
@@ -311,7 +311,7 @@ button {
 
 ul.social_icon {
      padding-top: 3px;
-     float: right;
+     float: left;
 }
 
 ul.social_icon li {
@@ -323,8 +323,9 @@ ul.social_icon li a {
      align-items: center;
      justify-content: center;
      font-size: 17px;
+     float: left;
      border-radius: 30px;
-     margin: 0 3px;
+     margin-left: 20px;
      color: #fff;
      background-color: #111111;
      width: 32px;
@@ -388,7 +389,9 @@ ul.social_icon li a:hover {
 }
 
 .get_btn:hover {
-     color: black ;
+     background-color: #1bb8bd;
+
+     color: white ;
 }
 
 .bann_img {
@@ -828,13 +831,13 @@ ul.social_icon li a:hover {
 
 .footer h3 {
      font-weight: 600;
-     font-size: 17px;
+     font-size: 16px;
      line-height: 19px;
      text-align: left;
      color: #fff;
      padding-bottom: 15px;
      display: table;
-     text-transform: uppercase;
+     text-transform: none;
 }
 
 .variat {
