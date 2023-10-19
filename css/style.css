@@ -286,8 +286,8 @@ section{
 
 
 .header {
-     padding-top: 2rem;
-     padding-bottom: 2rem;
+     padding-top: 3rem;
+     padding-bottom: 3rem;
      display: flex;
      align-items: center;
      justify-content: flex-end;
@@ -305,7 +305,7 @@ section{
      position: absolute;
      top: 1.5rem;
      right: 2rem;
-     font-size: 4rem;
+     font-size: 6rem;
      cursor: pointer;
      color: var(--black);
      display: none;
@@ -313,7 +313,7 @@ section{
 
 .header .navbar a{
      font-size: 2rem;
-     margin-left: 2rem;
+     margin-left: 6rem;
      color: #614178;
      text-transform: capitalize;
 }
@@ -369,6 +369,7 @@ header .navbar a:hover{
      height: auto;
      left: 0;
      top: 0;
+
 }
 
 
