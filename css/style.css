@@ -29,16 +29,30 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
-* {
-     box-sizing: border-box !important;
+:root {
+     --main-color:#a0dbdd;
+     --primary-color: #81c9ca;
+     --hover: #b6e2e2;
+     --black: #111616;
+     --white: #f0f7f7;
+     --border: .1rem solid #aaa;
+     --box-shadow:0 .5rem 1 rem rgb(0, 0, 0);
+
 }
+
+
+
+
 
 .container {
      max-width: 1170px;
 }
 
 html {
+     font-size: 62.5%;
+     overflow-x: hidden;
      scroll-behavior: smooth;
+     scroll-padding-top: 6rem;
 }
 
 body {
@@ -253,23 +267,105 @@ button {
 
 /*--------------------------------------------------------------------- top banner area ---------------------------------------------------------------------*/
 
+html::-webkit-scrollbar{
+     width: .6rem;
+}
+
+html::-webkit-scrollbar-track{
+     background-color: white;
+}
+
+html::-webkit-scrollbar-thumb{
+     background-color: #4cc6ca;
+}
+
+section{
+     padding: 5rem 7%;
+}
+
+
+
 .header {
-     width: 100%;
-     height: 86px;
-     padding: 24px 60px;
-     background: #fff;
+     padding-top: 2rem;
+     padding-bottom: 2rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: var(--box-shadow);
+     position: sticky;
+     top: 0;
+     left: 0; right: 0;
+     background: var(--main-color);
+     z-index: 1000;
+
 }
 
-.logo a img {
-     z-index: 9999;
+
+.header .navbar #close-navbar {
      position: absolute;
+     top: 1.5rem;
+     right: 2rem;
+     font-size: 4rem;
+     cursor: pointer;
+     color: var(--black);
+     display: none;
 }
 
-.logo::before {
+.header .navbar a{
+     font-size: 2rem;
+     margin-left: 2rem;
+     color: #614178;
+     text-transform: capitalize;
+}
+
+header .navbar a:hover{
+     padding-bottom: 0.5rem;
+     color: var(--primary-color);
+}
+
+#menu-btn{
+     font-size: 2.5rem;
+     cursor: pointer;
+     color: #000;
+     display: none;
+
+}
+
+.home {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background: url(../images/salon.png);
+     background-size: cover;
+     background-position: center ;
+}
+
+.home .content{
+     max-width: 60rem;
+
+}
+
+.home .content span{
+     font-size: 3rem;
+     letter-spacing: .5rem;
+     padding-bottom: .5rem;
+     color: #000;
+     text-transform: uppercase;
+}
+
+.home .content h3{
+     color: #111111;
+     font-size: 5rem;
+     line-height: 8rem;
+     font-weight: 800;
+}
+
+
+.logo {
      position: absolute;
      content: "";
      background-color: none;
-     max-width: 100%;
+     max-width: 150px;
      height: auto;
      left: 0;
      top: 0;
@@ -397,45 +493,6 @@ ul.social_icon li a:hover {
 .bann_img {
      padding-left: 59px;
      padding-right: 20px;
-}
-
-#myCarousel .carousel-control-prev,
-#myCarousel .carousel-control-next {
-     width: 55px;
-     height: 55px;
-     background: #2e2d2d;
-     opacity: 1;
-     font-size: 20px;
-     color: #ffffff;
-     top: 90%;
-}
-
-#myCarousel .carousel-control-prev:hover,
-#myCarousel .carousel-control-next:hover,
-#myCarousel .carousel-control-prev:focus,
-#myCarousel .carousel-control-next:focus {
-     background: #ececec;
-     color: #2e2d2d;
-}
-
-#myCarousel .carousel-control-prev {
-     left: inherit;
-     right: 100px;
-}
-
-#myCarousel .carousel-control-next {
-     right: 30px;
-}
-
-.banner .carousel-indicators li {
-     width: 20px;
-     height: 20px;
-     border-radius: 30px;
-     background: #000;
-}
-
-.carousel-indicators {
-     display: none;
 }
 
 
@@ -588,85 +645,6 @@ ul.social_icon li a:hover {
 }
 
 
-/** our pricing section **/
-
-.pricing {
-     background-color: #fff;
-     padding: 90px 0 170px 0;
-     position: relative;
-}
-
-.pricing .titlepage {
-     text-align: center;
-     padding-bottom: 45px;
-}
-
-.pricing_box {
-     border: #727272 solid 1px;
-     padding: 74px 101px 80px 101px;
-}
-
-.pricing_box_ti {
-     text-align: center;
-}
-
-.pricing_box_ti h3 {
-     font-size: 40px;
-     font-weight: bold;
-     padding-bottom: 5px;
-}
-
-.pricing_box_ti h3::before {
-     position: absolute;
-     content: "";
-     background-color: #ddd;
-     width: 84px;
-     height: 4px;
-     border-radius: 5px;
-     bottom: 0;
-}
-
-.pricing_box_ti h3 span {
-     color: #7321cd;
-}
-
-.pricing_box_ti h3 strong {
-     font-size: 15px;
-     font-weight: normal;
-}
-
-.our_pricing {
-     text-align: center;
-}
-
-.our_pricing span {
-     text-transform: uppercase;
-     font-size: 25px;
-     font-weight: bold;
-     line-height: 25px;
-     padding-bottom: 20px;
-     color: #2e2d2d;
-     padding-top: 30px;
-     display: block;
-}
-
-.our_pricing p {
-     line-height: 39px;
-}
-
-.mar_top {
-     margin-top: -20px !important;
-     margin: 0 auto;
-     display: block;
-     max-width: 142px;
-     height: 40px;
-     padding: 4px 0;
-     font-weight: normal;
-     margin-bottom: 30px;
-}
-
-
-/** end our pricing section **/
 
 
 /** Experts section **/
