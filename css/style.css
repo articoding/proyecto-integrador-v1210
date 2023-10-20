@@ -295,9 +295,8 @@ section{
      justify-content: flex-end;
      box-shadow: var(--box-shadow);
      position: sticky;
-     top: 0;
-     left: 0;
-     right: 0;
+     line-height: 52px;
+     margin: 0 5px;
      background: var(--white);
      z-index: 1000;
 }
