@@ -653,10 +653,10 @@ ul.social_icon li a:hover {
 }
 
 #exp:hover .experts_img figure img {
-     border-top: #2e2e2e solid 20px;
-     border-bottom: #2e2e2e solid 20px;
-     border-left: #2e2e2e solid 30px;
-     border-right: #2e2e2e solid 30px;
+     border-top: var(--primary-color) solid 20px;
+     border-bottom: var(--primary-color) solid 20px;
+     border-left: var(--primary-color) solid 30px;
+     border-right: var(--primary-color) solid 30px;
 }
 
 .experts .experts_box .meet {
