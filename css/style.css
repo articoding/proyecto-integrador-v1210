@@ -148,7 +148,7 @@ ol {
 }
 
 p {
-     margin: 0px;
+     margin: 25;
      font-weight: 400;
      color: #2e2d2d;
      font-size: 16px;
@@ -476,8 +476,8 @@ ul.social_icon li a:hover {
      font-size: 45px;
      color: #2e2d2d;
      line-height: 45px;
-     font-weight: bold;
-     padding: 0;
+     font-weight: bolder;
+     padding: 10px;
      margin: 0;
 }
 
@@ -870,8 +870,8 @@ ul.social_icon li a:hover {
      color: #fff;
      font-size: 40px;
      padding: 40px 0;
-     font-weight: 6;
-     text-transform: uppercase;
+     font-weight: 600;
+     text-transform:capitalize;
      line-height: 35px;
 }
 
