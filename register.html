@@ -1,50 +1,7 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" href="css/styleIS.css">
-</head>
-<body>
-  <div class="myformulario">
-    <h1>Registro</h1>
-    <form method="post">
-      <div class="username">
-        <input type="text" required>
-        <label >Nombre</label>
-      </div>
-      <div class="username">
-        <input type="text" required>
-        <label >Apellido</label>
-      </div>
-      <div class="username">
-        <input type="date" required>
-        <label >Fecha de nacimiento</label>
-      </div>
-      <div class="username">
-        <input type="text" required>
-        <label >Correo electronico</label>
-      </div>
-      <div class="username">
-<input type="password" required>
-<label>Contraseña</label>
-      </div>
-      <div class="username">
-        <input type="password" required>
-        <label>Confirmar Contraseña</label>
-              </div>
-<input type="submit" value="Registrarse">
-    </form>
-  </div>
-</body>
-</html>
-=======
   <!DOCTYPE html>
-  <html lang="en">
+ <html lang="en">
   <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="css/styleIS.css">
@@ -54,34 +11,34 @@
   <body>
     <div class="myformulario">
       <h1>Registro</h1>
-      <form method="post">
+      <form method="post" action="connect.php">
         <div class="username">
-          <input type="text" required>
-          <label >Nombre</label>
+          <input type="text" required id="user_name" name="user_name">
+          <label for="user_name">Nombre</label>
         </div>
         <div class="username">
-          <input type="text" required>
-          <label >Apellido</label>
+          <input type="text" required id="user_lastname" name="user_lastname">
+          <label for="user_lastname">Apellido</label>
         </div>
         <div class="username">
-          <input type="date" required>
-          <label >Fecha de nacimiento</label>
+          <input type="date" required id="user_birthdate" name="user_birthdate">
+          <label for="user_birthdate">Fecha de nacimiento</label>
         </div>
         <div class="username">
-          <input type="text" required>
-          <label >Correo electronico</label>
+          <input type="text" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+          "
+          required id="user_email" name="user_email">
+          <label for="user_email">Correo electronico</label>
         </div>
         <div class="username">
-  <input type="password" required>
-  <label>Contraseña</label>
+  <input type="password" required id="user_password" name="user_password">
+  <label for="user_password">Contraseña</label>
         </div>
-        <div class="username">
-          <input type="password" required>
-          <label>Confirmar Contraseña</label>
-                </div>
   <input type="submit" value="Registrarse">
       </form>
     </div>
+    <?php
+      include("send.php");
+    ?>
   </body>
   </html>
->>>>>>> master
