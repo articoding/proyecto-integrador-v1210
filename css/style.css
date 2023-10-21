@@ -206,6 +206,8 @@ img {
      border: none !important;
 }
 
+
+/*Fin del nav responsive*/
 .badge {
      font-weight: 500;
 }
@@ -952,3 +954,5 @@ ul.social_icon li a:hover {
      }
  
  }
+
+ 
