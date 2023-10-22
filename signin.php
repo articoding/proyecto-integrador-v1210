@@ -1,3 +1,7 @@
+<?php
+  include("connection.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +15,17 @@
 <body>
   <div class="myformulario">
     <h1>Inicio de Sesión</h1>
-    <form method="post">
+    <form name = "form" action="login.php" method="POST">
       <div class="username">
-        <input type="text" required>
         <label >Nombre de usuario</label>
+        <input type="text" required id="user" name="user">
       </div>
       <div class="username">
-<input type="password" required>
-<label>Contraseña</label>
+        <label>Contraseña</label>
+        <input type="password" required id="password" name="password">
       </div>
 <div class="recordar">¿Olvidó su contraseña?</div>
-<input type="submit" value="Iniciar">
+<input type="submit" id="btn" value="login" name="submit">
 <div class="registrarse">
     Quiero hacer el <a href="register.html">registro</a>
 </div>
