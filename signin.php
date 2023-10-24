@@ -25,7 +25,7 @@
         <input type="password" required id="password" name="password">
       </div>
 <div class="recordar">¿Olvidó su contraseña?</div>
-<input type="submit" id="btn" value="login" name="submit">
+<input type="submit" id="btn" value="Iniciar sesión" name="submit">
 <div class="registrarse">
     Quiero hacer el <a href="register.html">registro</a>
 </div>
