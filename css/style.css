@@ -58,7 +58,7 @@ html {
 }
 
 body {
-     color: #1bb8bd;
+     color: #a5d9db;
      font-size: 14px;
      font-family: 'Karla', sans-serif;
      line-height: 1.80857;
@@ -83,7 +83,7 @@ h4,
 h5,
 h6 {
      letter-spacing: 0;
-     font-weight: normal;
+     font-weight: 100;
      position: relative;
      padding: 0 0 10px 0;
      font-weight: normal;
@@ -369,6 +369,7 @@ section{
      height: auto;
      left: 0;
      top: 0;
+     padding: 15px;
 
 }
 
@@ -895,15 +896,15 @@ ul.social_icon li a:hover {
          padding:3rem 2rem;
       }
  
- }
+}
  
- @media (max-width:768px){
+@media (max-width:768px){
  
      #menu-btn{
          display: inline-block;
      }
  
-      .header .navbar {
+     .header .navbar {
          position: fixed;
          top: 0;
          right: -105%;
@@ -921,29 +922,29 @@ ul.social_icon li a:hover {
              -ms-flex-pack: center;
                  justify-content: center;
          z-index: 1200;
-       }
-       .header .navbar #close-navbar {
+     }
+     .header .navbar #close-navbar {
          display: block;
-       }
-       .header .navbar.active {
+     }
+     .header .navbar.active {
          right: 0;
-       }
+     }
        
-       .header .navbar a {
+     .header .navbar a {
          display: block;
          margin: 1rem 0;
          text-align: center;
          font-size: 3rem;
-       }
+     }
  
      .home .content h3{
          font-size: 5.5rem;
      }
  
  
- }
+}
  
- @media (max-width:450px){
+@media (max-width:450px){
  
      html{
          font-size: 50%;
@@ -953,6 +954,4 @@ ul.social_icon li a:hover {
          font-size: 4.5rem;
      }
  
- }
-
- 
+}
