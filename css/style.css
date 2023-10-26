@@ -968,8 +968,8 @@ ul.social_icon li a:hover {
  
  .We_doxM img {
      position: relative;
-     left: 795px;
-     min-width: 80vh;
+     left: 720px;
+     min-width: 90vh;
      min-height: 60vh;
  }
 
@@ -996,7 +996,7 @@ ul.social_icon li a:hover {
      right: 160px;
      top: -10px;
      min-height: 60vh;
-     min-width: 80vh;
+     min-width: 90vh;
  }
 
  .We_doxC h3 {
@@ -1019,8 +1019,9 @@ ul.social_icon li a:hover {
  .Shome h3 {
      position: relative;
      font-size: 100px;
-     color: wheat;
-     left: 110%;
+     color: white;
+     border: solid 4px;
+     left: 105%;
  }
 
  .We_doxMn {
@@ -1030,18 +1031,22 @@ ul.social_icon li a:hover {
  }
  .We_doxMn p {
      position: relative;
-     top: -95px;
-     left: 10px;
+     top: -380px;
+     left: 600px;
  }
  
- .We_doxMn i {
+ .We_doxMn img {
      position: relative;
-     right: 110px;
+     right: 160px;
+     min-width: 90vh;
+     min-height: 60vh;
  }
 
  .We_doxMn h3 {
-     position: absolute;
-     left: -110px;
+     position: relative;
+     left: 600px;
+     top: -400px;
+     font-size: 40px;
  }
 
  .We_doxP {
@@ -1051,17 +1056,21 @@ ul.social_icon li a:hover {
  }
  .We_doxP p {
      position: relative;
-     top: -95px;
-     left: 10px;
+     top: -390px;
+     left: 200px;
  }
  
- .We_doxP i {
+ .We_doxP img {
      position: relative;
-     right: 110px;
+     left: 720px;
+     min-width: 90vh;
+     min-height: 60vh;
  }
 
  .We_doxP h3 {
-     position: absolute;
-     left: -110px;
+     position: relative;
+     left: 200px;
+     top: -400px;
+     font-size: 40px;
  }
  /* End of Services page */
