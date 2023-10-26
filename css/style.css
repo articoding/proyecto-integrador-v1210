@@ -567,8 +567,40 @@ ul.social_icon li a:hover {
      background-image:url(../images/about-left.png);
      background-repeat:no-repeat; 
      background-position:left bottom;
+     padding-top: 90px;
+     position: relative;
+     padding-bottom: 170px;
 }
- 
+
+.about_img {
+     overflow: hidden;
+}
+
+.about_img figure img {
+     width: 100%;
+     transition: all .5s;
+}
+
+.about_img figure img:hover {
+     transform: scale(1.2);
+}
+
+.about .titlepage {
+     text-align: left;
+     padding-bottom: 0;
+}
+
+.about .titlepage p {
+     font-weight: 400;
+     font-size: 17px;
+     line-height: 28px;
+     padding-bottom: 40px;
+}
+
+.about_img figure {
+     margin: 0;
+}
+
 .about .row{
      display: flex;
      align-items: center;
