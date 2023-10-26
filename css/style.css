@@ -563,13 +563,24 @@ ul.social_icon li a:hover {
 
 /** end team section **/
 
+.slin2::before {
+     position: absolute;
+     content: "";
+     bottom: 0%;
+     background: url(../images/slin2.png);
+     background-repeat: no-repeat;
+     max-width: 820px;
+     height: 147px;
+     left: 15%;
+}
+
 .about{
      background-image:url(../images/about-left.png);
      background-repeat:no-repeat; 
      background-position:left bottom;
-     padding-top: 90px;
+     padding-top: 45px;
      position: relative;
-     padding-bottom: 170px;
+     padding-bottom: 50px;
 }
 
 .about_img {
@@ -659,11 +670,12 @@ ul.social_icon li a:hover {
 
 .heading{
      text-align: center;
-     color:var(--primary-color);
+     color: var(--primary-color);
      text-transform: capitalize;
      margin-bottom: 3rem;
      font-size: 4rem;
      margin-top: 4rem;
+     font-weight: bolder;
   }
   
 /** Experts section **/
