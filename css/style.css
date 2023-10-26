@@ -563,77 +563,77 @@ ul.social_icon li a:hover {
 
 /** end team section **/
 
-.about {
-     background-color: #fff;
-     padding-top: 90px;
-     position: relative;
-     padding-bottom: 170px;
+.about{
+     background-image:url(../images/about-left.png);
+     background-repeat:no-repeat; 
+     background-position:left bottom;
 }
-
-.about-us {
-     min-height: 100vh;
+ 
+.about .row{
      display: flex;
      align-items: center;
-     background: url(../images/Estetica_fondo.jpg);
-     background-size: cover;
-     background-position: center;
+     flex-wrap: wrap;
 }
-
-.aboutus-content h3 {
-     color: var(--white);
-     font-size: 8rem;
-     line-height: 8rem;
-     font-weight: 800;
+ 
+.about .row .image{
+     flex:1 1 39rem;
 }
-
-.slin2::before {
-     position: absolute;
-     content: "";
-     bottom: 0%;
-     background: url(../images/slin2.png);
-     background-repeat: no-repeat;
-     max-width: 820px;
-     height: 147px;
-     left: 15%;
+ 
+.about .row .image img{
      width: 100%;
 }
-
-.about .titlepage {
-     text-align: left;
-     padding-bottom: 0;
+.about .row .content{
+     flex:1 1 51rem;
+     padding:5rem;
+}
+ 
+.about .row .content h3{
+     font-size: 3rem;
+     color:var(--primary-color);
+}
+ 
+.about .row .content p{
+     font-size: 1.6rem;
+     color:#444;
+     padding:1rem 0;
+     line-height: 1.8;
+}
+ 
+.about .content .icons-container{
+     display: flex;
+     flex-wrap: wrap;
+     gap:2rem;
+     margin-top: 3rem;
+}
+  
+.about .content .icons-container .icons{
+     flex:1 1 16rem;
+     text-align: center;
+     background: var(--light-bg);
+     padding:3rem 2rem;
+}
+  
+.about .content .icons-container .icons img{
+     height: 5rem;
+}
+  
+.about .content .icons-container .icons h3{
+     padding-top: 1rem;
+     font-size: 1.6rem;
+     color:#444;
+     font-weight: normal;
+     text-transform: capitalize;
 }
 
-.about .titlepage h2 {
-     margin-bottom: 30px;
-}
-
-.about .titlepage p {
-     font-weight: 400;
-     font-size: 17px;
-     line-height: 28px;
-     padding-bottom: 40px;
-}
-
-.about_img {
-     overflow: hidden;
-}
-
-.about_img figure {
-     margin: 0;
-}
-
-.about_img figure img {
-     width: 100%;
-     transition: all .5s;
-}
-
-.about_img figure img:hover {
-     transform: scale(1.2);
-}
-
-
-
-
+.heading{
+     text-align: center;
+     color:var(--primary-color);
+     text-transform: capitalize;
+     margin-bottom: 3rem;
+     font-size: 4rem;
+     margin-top: 4rem;
+  }
+  
 /** Experts section **/
 
 .experts {
