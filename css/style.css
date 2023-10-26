@@ -570,6 +570,22 @@ ul.social_icon li a:hover {
      padding-bottom: 170px;
 }
 
+.about-us {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background: url(../images/Estetica_fondo.jpg);
+     background-size: cover;
+     background-position: center;
+}
+
+.aboutus-content h3 {
+     color: var(--white);
+     font-size: 8rem;
+     line-height: 8rem;
+     font-weight: 800;
+}
+
 .slin2::before {
      position: absolute;
      content: "";
@@ -941,6 +957,10 @@ ul.social_icon li a:hover {
      .home .content h3{
          font-size: 5.5rem;
      }
+
+     .about-us h3 {
+         font-size: 5.5.rem;
+     }
  
  
 }
@@ -952,6 +972,10 @@ ul.social_icon li a:hover {
      }
  
      .home .content h3{
+         font-size: 4.5rem;
+     }
+
+     .about-us h3 {
          font-size: 4.5rem;
      }
  
