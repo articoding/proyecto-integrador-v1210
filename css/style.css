@@ -923,9 +923,11 @@ ul.social_icon li a:hover {
                  justify-content: center;
          z-index: 1200;
      }
+
      .header .navbar #close-navbar {
          display: block;
      }
+     
      .header .navbar.active {
          right: 0;
      }

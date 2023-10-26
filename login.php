@@ -14,7 +14,7 @@
         else{
             echo '<script>
                 window.location.href = "signin.php";
-                alert("Login failed. Invalid Username or Password");
+                alert("Inicio de sesión fallido. Contraseña o usuario incorrecto");
             </script>';
     
         }
