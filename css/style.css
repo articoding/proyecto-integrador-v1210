@@ -981,6 +981,14 @@ ul.social_icon li a:hover {
  
  }
 /* Services page*/
+
+@font-face{
+     font-family: 'BebasNeue';
+     src:url(/fonts/BebasNeue-Regular.ttf);
+     font-weight: normal;
+     font-style: normal;
+   }
+
  .We_doxM {
      position: relative;
      top: 10px;
@@ -1015,6 +1023,11 @@ ul.social_icon li a:hover {
      position: relative;
      top: -300px;
      left: 600px;
+     display: block;
+     margin-block-start: 1em;
+     margin-block-end: 1em;
+     margin-inline-start: 0px;
+     margin-inline-end: -200px;
  }
  
  .We_doxC img {
@@ -1048,6 +1061,8 @@ ul.social_icon li a:hover {
      color: white;
      border: solid 4px;
      left: 105%;
+    /* font-family: 'BebasNeue';
+     font-weight: normal;*/
  }
 
  .We_doxMn {
