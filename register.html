@@ -14,32 +14,29 @@
       <h1>Registro</h1>
       <form method="post" action="connect.php">
         <div class="username">
-          <input type="text" required id="user_name" name="user_name">
-          <label for="user_name">Nombre</label>
+          <input type="text" required id="user_name" name="user_name" placeholder="Nombre">
+          <!--<label for="user_name">Nombre</label>-->
         </div>
         <div class="username">
-          <input type="text" required id="user_lastname" name="user_lastname">
-          <label for="user_lastname">Apellido</label>
+          <input type="text" required id="user_lastname" name="user_lastname" placeholder="Apellido">
+          <!--<label for="user_lastname">Apellido</label>-->
         </div>
         <div class="username">
-          <input type="date" required id="user_birthdate" name="user_birthdate">
-          <label for="user_birthdate">Fecha de nacimiento</label>
+          <input type="date" required id="user_birthdate" name="user_birthdate" placeholder="Fecha de nacimiento">
+          <!--<label for="user_birthdate">Fecha de nacimiento</label>-->
         </div>
         <div class="username">
           <input type="text" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
           "
-          required id="user_email" name="user_email">
-          <label for="user_email">Correo electronico</label>
+          required id="user_email" name="user_email" placeholder="Email">
+          <!--<label for="user_email">Correo electronico</label>-->
         </div>
         <div class="username">
-  <input type="password" required id="user_password" name="user_password">
-  <label for="user_password">Contraseña</label>
+  <input type="password" required id="user_password" name="user_password" placeholder="Contraseña">
+  <!--<label for="user_password">Contraseña</label>-->
         </div>
   <input type="submit" value="Registrarse">
       </form>
     </div>
-    <?php
-      include("send.php");
-    ?>
   </body>
 </html>

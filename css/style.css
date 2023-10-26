@@ -310,26 +310,26 @@ section{
      cursor: pointer;
      color: var(--black);
      display:none;
-   }
+}
   
- .header .navbar a{
+.header .navbar a{
      font-size: 2rem;
      margin-left: 2rem;
      color:var(--black);
      text-transform: capitalize;
- }
+}
   
-  .header .navbar a:hover{
+.header .navbar a:hover{
      padding-bottom: 0.5rem;
      color:var(--primary-color);
-  }
+}
   
-  #menu-btn{
+#menu-btn{
      font-size: 2.5rem;
      cursor: pointer;
      color:var(--primary-color);
      display: none;
-  }
+}
 
 .home {
      min-height: 100vh;
@@ -370,7 +370,6 @@ section{
      left: 0;
      top: 0;
      padding: 15px;
-
 }
 
 
@@ -512,7 +511,7 @@ ul.social_icon li a:hover {
 
 
 /** What We Do section **/
-
+/*
 .we_do {
      padding-top: 90px;
      padding-bottom: 147px;
@@ -556,7 +555,7 @@ ul.social_icon li a:hover {
      padding-bottom: 5px;
      color: #2e2d2d;
      padding-top: 30px;
-}
+}*/
 
 
 /** end What We Do section **/
@@ -956,4 +955,6 @@ ul.social_icon li a:hover {
          font-size: 4.5rem;
      }
  
-}
+ }
+
+ 
