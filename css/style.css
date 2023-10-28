@@ -10,7 +10,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
@@ -311,26 +310,26 @@ section{
      cursor: pointer;
      color: var(--black);
      display:none;
-}
+   }
   
-.header .navbar a{
+ .header .navbar a{
      font-size: 2rem;
      margin-left: 2rem;
      color:var(--black);
      text-transform: capitalize;
-}
+ }
   
-.header .navbar a:hover{
+  .header .navbar a:hover{
      padding-bottom: 0.5rem;
      color:var(--primary-color);
-}
+  }
   
-#menu-btn{
+  #menu-btn{
      font-size: 2.5rem;
      cursor: pointer;
      color:var(--primary-color);
      display: none;
-}
+  }
 
 .home {
      min-height: 100vh;
@@ -338,10 +337,7 @@ section{
      align-items: center;
      background: url(../images/salon.png);
      background-size: cover;
-     background-position: center;
-     background-repeat: repeat;
-     justify-content: center;
-     overflow: hidden;
+     background-position: center ;
 }
 
 .home .content{
@@ -355,12 +351,11 @@ section{
      padding-bottom: .5rem;
      color: #000;
      text-transform: uppercase;
-     text-align: justify;
 }
 
 .home .content h3{
      color: #111111;
-     font-size: 4.8rem;
+     font-size: 5rem;
      line-height: 8rem;
      font-weight: 800;
 }
@@ -375,6 +370,7 @@ section{
      left: 0;
      top: 0;
      padding: 15px;
+
 }
 
 
@@ -485,8 +481,6 @@ ul.social_icon li a:hover {
      line-height: 45px;
      font-weight: bolder;
      margin: 0;
-     text-transform: none;
-
 }
 
 .d_flex {
@@ -569,16 +563,12 @@ ul.social_icon li a:hover {
 
 /** end team section **/
 
-.slin::before {
-     position: absolute;
-     content: "";
-     bottom: 0%;
-     background: url(../images/slin.png);
-     background-repeat: no-repeat;
-     max-width: 820px;
-     height: 147px;
-     right: 15%;
-     width: 100%;
+.about {
+     background-color: #fff;
+     padding-top: 90px;
+     position: relative;
+     padding-bottom: 170px;
+     
 }
 
 .slin2::before {
@@ -590,34 +580,16 @@ ul.social_icon li a:hover {
      max-width: 820px;
      height: 147px;
      left: 15%;
-}
-
-.about{
-     background-repeat:no-repeat;
-     background-position:left bottom;
-     padding-top: 45px;
-     position: relative;
-     padding-bottom: 50px;
-}
-
-.about_img {
-     overflow: hidden;
-
-}
-
-.about_img figure img {
      width: 100%;
-     transition: all .5s;
-
-}
-
-.about_img figure img:hover {
-     transform: scale(1.2);
 }
 
 .about .titlepage {
      text-align: left;
      padding-bottom: 0;
+}
+
+.about .titlepage h2 {
+     margin-bottom: 30px;
 }
 
 .about .titlepage p {
@@ -627,8 +599,21 @@ ul.social_icon li a:hover {
      padding-bottom: 40px;
 }
 
+.about_img {
+     overflow: hidden;
+}
+
 .about_img figure {
      margin: 0;
+}
+
+.about_img figure img {
+     width: 100%;
+     transition: all .5s;
+}
+
+.about_img figure img:hover {
+     transform: scale(1.2);
 }
 
 .about .row{
@@ -640,63 +625,49 @@ ul.social_icon li a:hover {
 .about .row .image{
      flex:1 1 39rem;
 }
- 
-.about .row .image img{
-     width: 100%;
-}
+
 .about .row .content{
      flex:1 1 51rem;
      padding:5rem;
 }
- 
+
 .about .row .content h3{
-     font-size: 3rem;
-     color:var(--primary-color);
-}
- 
-.about .row .content p{
-     font-size: 1.6rem;
-     color:#444;
-     padding:1rem 0;
-     line-height: 1.8;
-}
- 
-.about .content .icons-container{
-     display: flex;
-     flex-wrap: wrap;
-     gap:2rem;
-     margin-top: 3rem;
-}
-  
-.about .content .icons-container .icons{
-     flex:1 1 16rem;
-     text-align: center;
-     background: var(--light-bg);
-     padding:3rem 2rem;
-}
-  
-.about .content .icons-container .icons img{
-     height: 5rem;
-}
-  
-.about .content .icons-container .icons h3{
-     padding-top: 1rem;
-     font-size: 1.6rem;
-     color:#444;
-     font-weight: normal;
-     text-transform: capitalize;
+font-size: 3rem;
+color:var(--primary-color);
 }
 
-.heading{
-     text-align: center;
-     color: var(--primary-color);
-     text-transform: capitalize;
-     margin-bottom: 3rem;
-     font-size: 4rem;
-     margin-top: 4rem;
-     font-weight: bolder;
-  }
-  
+.about .row .content p{
+font-size: 1.6rem;
+color:#444;
+padding:1rem 0;
+line-height: 1.8;
+}
+
+.about .content .icons-container{
+display: flex;
+flex-wrap: wrap;
+gap:2rem;
+margin-top: 3rem;
+}
+
+.about .content .icons-container .icons{
+flex:1 1 16rem;
+text-align: center;
+background: var(--light-bg);
+padding:3rem 2rem;
+}
+
+.about .content .icons-container .icons img{
+height: 5rem;
+}
+
+.about .content .icons-container .icons h3{
+padding-top: 1rem;
+font-size: 1.6rem;
+color:#444;
+font-weight: normal;
+text-transform: capitalize;
+}
 /** Experts section **/
 
 .experts {
@@ -1020,10 +991,6 @@ ul.social_icon li a:hover {
      .home .content h3{
          font-size: 5.5rem;
      }
-
-     .about-us h3 {
-         font-size: 5.5.rem;
-     }
  
  
 }
@@ -1037,144 +1004,146 @@ ul.social_icon li a:hover {
      .home .content h3{
          font-size: 4.5rem;
      }
-
-     .about-us h3 {
-         font-size: 4.5rem;
-     }
  
- }
+}
+
+.about-us h3 {
+     font-size: 4.5rem;
+}
+
+
 /* Services page*/
 
 @font-face{
-     font-family: 'BebasNeue';
-     src:url(/fonts/BebasNeue-Regular.ttf);
-     font-weight: normal;
-     font-style: normal;
-   }
+ font-family: 'BebasNeue';
+ src:url(/fonts/BebasNeue-Regular.ttf);
+ font-weight: normal;
+ font-style: normal;
+}
 
- .We_doxM {
-     position: relative;
-     top: 10px;
-     display: inline;
- }
- .We_doxM p {
-     position: relative;
-     top: -340px;
-     left: 200px;
- }
- 
- .We_doxM img {
-     position: relative;
-     left: 720px;
-     min-width: 90vh;
-     min-height: 60vh;
- }
+.We_doxM {
+ position: relative;
+ top: 10px;
+ display: inline;
+}
+.We_doxM p {
+ position: relative;
+ top: -340px;
+ left: 200px;
+}
 
- .We_doxM h3 {
-     position: relative;
-     left: 200px;
-     top: -350px;
-     font-size: 40px;
- }
+.We_doxM img {
+ position: relative;
+ left: 720px;
+ min-width: 90vh;
+ min-height: 60vh;
+}
 
- .We_doxC {
-     position: relative;
-     top: 10px;
-     display: inline;
- }
- .We_doxC p {
-     position: relative;
-     top: -300px;
-     left: 600px;
-     display: block;
-     margin-block-start: 1em;
-     margin-block-end: 1em;
-     margin-inline-start: 0px;
-     margin-inline-end: -200px;
- }
- 
- .We_doxC img {
-     position: relative;
-     right: 160px;
-     top: -10px;
-     min-height: 60vh;
-     min-width: 90vh;
- }
+.We_doxM h3 {
+ position: relative;
+ left: 200px;
+ top: -350px;
+ font-size: 40px;
+}
 
- .We_doxC h3 {
-     position: relative;
-     left: 600px;
-     top: -315px;
-     font-size: 40px;
+.We_doxC {
+ position: relative;
+ top: 10px;
+ display: inline;
+}
+.We_doxC p {
+ position: relative;
+ top: -300px;
+ left: 600px;
+ display: block;
+ margin-block-start: 1em;
+ margin-block-end: 1em;
+ margin-inline-start: 0px;
+ margin-inline-end: -200px;
+}
 
- }
+.We_doxC img {
+ position: relative;
+ right: 160px;
+ top: -10px;
+ min-height: 60vh;
+ min-width: 90vh;
+}
 
- .Shome {
-     min-height: 100vh;
-     display: flex;
-     align-items: center;
-     background: url(../images/Estetica_fondo.jpg);
-     background-size: cover;
-     background-position: center;
- }
+.We_doxC h3 {
+ position: relative;
+ left: 600px;
+ top: -315px;
+ font-size: 40px;
 
- .Shome h3 {
-     position: relative;
-     font-size: 100px;
-     color: white;
-     border: solid 4px;
-     left: 105%;
-    /* font-family: 'BebasNeue';
-     font-weight: normal;*/
- }
+}
 
- .We_doxMn {
-     position: relative;
-     top: -80px;
-     display: inline;
- }
- .We_doxMn p {
-     position: relative;
-     top: -380px;
-     left: 600px;
- }
- 
- .We_doxMn img {
-     position: relative;
-     right: 160px;
-     min-width: 90vh;
-     min-height: 60vh;
- }
+.Shome {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ background: url(../images/Estetica_fondo.jpg);
+ background-size: cover;
+ background-position: center;
+}
 
- .We_doxMn h3 {
-     position: relative;
-     left: 600px;
-     top: -400px;
-     font-size: 40px;
- }
+.Shome h3 {
+ position: relative;
+ font-size: 100px;
+ color: white;
+ border: solid 4px;
+ left: 105%;
+/* font-family: 'BebasNeue';
+ font-weight: normal;*/
+}
 
- .We_doxP {
-     position: relative;
-     top: 10px;
-     display: inline;
- }
- .We_doxP p {
-     position: relative;
-     top: -390px;
-     left: 200px;
- }
- 
- .We_doxP img {
-     position: relative;
-     left: 720px;
-     min-width: 90vh;
-     min-height: 60vh;
- }
+.We_doxMn {
+ position: relative;
+ top: -80px;
+ display: inline;
+}
+.We_doxMn p {
+ position: relative;
+ top: -380px;
+ left: 600px;
+}
 
- .We_doxP h3 {
-     position: relative;
-     left: 200px;
-     top: -400px;
-     font-size: 40px;
- }
- /* End of Services page */
+.We_doxMn img {
+ position: relative;
+ right: 160px;
+ min-width: 90vh;
+ min-height: 60vh;
+}
+
+.We_doxMn h3 {
+ position: relative;
+ left: 600px;
+ top: -400px;
+ font-size: 40px;
+}
+
+.We_doxP {
+ position: relative;
+ top: 10px;
+ display: inline;
+}
+.We_doxP p {
+ position: relative;
+ top: -390px;
+ left: 200px;
+}
+
+.We_doxP img {
+ position: relative;
+ left: 720px;
+ min-width: 90vh;
+ min-height: 60vh;
+}
+
+.We_doxP h3 {
+ position: relative;
+ left: 200px;
+ top: -400px;
+ font-size: 40px;
+}
+/* End of Services page */
