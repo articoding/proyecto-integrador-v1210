@@ -1,4 +1,5 @@
-
+<?php
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,6 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -51,11 +51,11 @@
            </div>
            <nav class="navbar">
              <div id="close-navbar" class="fas fa-times"></div>
-             <a href="index.html">Inicio</a>
-             <a href="about.html">Nosotros</a>
-             <a href="we-do.html">Servicios</a>
-             <a href="contact.html">Contacto</a>
-             <a href="register.html">Regístrate</a>
+             <a href="index.php">Inicio</a>
+             <a href="about.php">Nosotros</a>
+             <a href="we-do.php">Servicios</a>
+             <a href="contact.php">Contacto</a>
+             <a href="register.php">Regístrate</a>
              <a href="signin.php">Iniciar sesión</a>
            </nav>
        
@@ -64,64 +64,57 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-
-
-      <!-- about us -->
-
-      <div class="back_re">
+        <div class="back_re">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="title">
-                      <h2>Sobre Nosotros</h2>
+                      <h2>Contáctanos</h2>
                   </div>
                </div>
             </div>
          </div>
       </div>
-   <section class="about" id="about">
-
-
-      <div class="row" >
-
-         <div class="image">
-            <img src="images/about.jpg" alt="">
+      <!--  contact -->
+      <div class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 offset-md-3">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Nombre Completo" type="type" name="Nombre Completo"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email " type="type" name="Email "> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Número de Celular" type="type" name="Número de Celular">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Mensaje" type="type" Mensaje="Name">Mensaje</textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Enviar</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
          </div>
-
-         <div class="content">
-            <h3 class="title">Historia</h3>
-            <p>Desde nuestra fundación, hemos crecido para convertirnos en uno de los salones de belleza más respetados y reconocidos en Reynosa. Nuestra historia está marcada por un dedicado equipo de profesionales que comparten una visión común: realzar la belleza de cada cliente y brindar un servicio de calidad que trascienda las expectativas.</p>        
-            <h3 class="title">Nuestra Mision y Valores</h3>
-            <p>En Lizbeth Hair Salon, nuestra misión es realzar la belleza de cada persona que entra por nuestras puertas. Nos enorgullece nuestro compromiso con la satisfacción del cliente, la calidad, la innovación y la integridad. Nuestros valores fundamentales incluyen la excelencia, el profesionalismo, la diversidad, la responsabilidad social y el bienestar de nuestros clientes.</p>
-            
-            <div class="icons-container">
-                  <div class="icons">
-                     <img src="images/about-1.png" alt="">
-                     <h3>Heramientas profesionales</h3>
-                  </div>
-                  <div class="icons">
-                     <img src="images/about-icon-2.png" alt="">
-                     <h3>Productos de la más alta calidad</h3>
-                  </div>
-                  <div class="icons">
-                     <img src="images/about-icon-3.png" alt="">
-                     <h3>Lavado de cabello</h3>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="map_main">
+                     <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.730186443148!2d-98.2868487249425!3d26.07507287715641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86650fe0baea41f7%3A0xef8d64194148893e!2sLizbeth%20Hair%20Sal%C3%B3n!5e0!3m2!1ses-419!2smx!4v1696943947198!5m2!1ses-419!2smx" width="600" height="386" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                     </div>
                   </div>
                </div>
+            </div>
          </div>
-
       </div>
-
-   </section>
-
-<!-- about us end -->
-     
-   
-
-      
-
-      <!-- end about -->
-   
+      <!-- end contact -->
       <!--  footer -->
       <section class="footer">
 
@@ -161,7 +154,7 @@
       
          </div>
       
-         <div class="credit" id="copyright"> &copy 2023 <span>Lizbeth Hair Salon</span> | Todos los derechos reservados. </div>
+         <div class="credit"> &copy 2023 <span>Lizbeth Hair Salon</span> | Todos los derechos reservados. </div>
       
       </section>
       <!-- end footer -->

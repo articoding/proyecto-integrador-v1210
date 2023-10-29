@@ -1,3 +1,5 @@
+<?php
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,15 +46,15 @@
       <header>
          <div class="header">
            <div class="logo">
-             <a href="index.html"> <img src="images/logo.png" alt=""> </a>
+             <a href="index.php"> <img src="images/logo.png" alt=""> </a>
            </div>
            <nav class="navbar">
                <div id="close-navbar" class="fas fa-times"></div>
-             <a href="index.html">Inicio</a>
-             <a href="about.html">Nosotros</a>
-             <a href="we-do.html">Servicios</a>
-             <a href="contact.html">Contacto</a>
-             <a href="register.html">Regístrate</a>
+             <a href="index.php">Inicio</a>
+             <a href="about.php">Nosotros</a>
+             <a href="we-do.php">Servicios</a>
+             <a href="contact.php">Contacto</a>
+             <a href="register.php">Regístrate</a>
              <a href="signin.php">Iniciar sesión</a>
            </nav>
            <div id="menu-btn" class="fas fa-bars"></div>
