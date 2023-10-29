@@ -1,5 +1,8 @@
     <?php
-    include("connect.php");
+        /*session_start();
+        if(isset($_SESSION["row"])){
+            header("Location: index.html");
+        }*/
         include("connection.php");
         if(isset($_POST['submit'])){
             $user_email = $_POST['email'];
@@ -9,7 +12,12 @@
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
             $count = mysqli_num_rows($result);
-            
+            /*if($row){
+                if(password_verify($password, $row['user_password'])){
+                    session_start();
+                    $_SESSION["row"] = "yes";
+                
+            }*/
                 if ($row["usertype"]=="user") {
                     header("location: index.html");
                 }
@@ -27,5 +35,6 @@
             }
         }
         
+    
         
     ?>
