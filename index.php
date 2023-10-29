@@ -183,40 +183,7 @@
       </div>
       <!-- end experts -->
       <!--  contact -->
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2 id="Contatcus">Comunícate con nosotros por medio del siguiente formulario</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6 offset-md-3">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre Completo" type="type" name="Nombre Completo"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email " type="type" name="Email "> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Número de Celular" type="type" name="Número de Celular">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="type" Mensaje="Name">Mensaje</textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Enviar</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-         <div class="container-fluid">
+             <div class="container-fluid">
             <div class="row">
                <div class="col-md-12">
                   <div class="map_main">
