@@ -80,6 +80,7 @@
                         <a class="collapse-item" href="../../buttons.php">Buttons</a>
                         <a class="collapse-item" href="../../cards.php">Cards</a>
                         <a class="collapse-item active" href="index.php">Servicios</a>
+                        <a class="collapse-item" href="../../index.php">Contacto</a>
                     </div>
                 </div>
             </li>
