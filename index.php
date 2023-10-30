@@ -1,3 +1,5 @@
+<?php
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,25 +46,25 @@
       <header>
          <div class="header">
            <div class="logo">
-             <a href="index.html"> <img src="images/logo.png" alt=""> </a>
+             <a href="index.php"> <img src="images/logo.png" alt=""> </a>
            </div>
            <nav class="navbar">
-             <a href="index.html">Inicio</a>
-             <a href="about.html">Nosotros</a>
-             <a href="we-do.html">Servicios</a>
-             <a href="contact.html">Contacto</a>
-             <a href="easyappointments/">Citas</a>
+               <div id="close-navbar" class="fas fa-times"></div>
+             <a href="index.php">Inicio</a>
+             <a href="about.php">Nosotros</a>
+             <a href="we-do.php">Servicios</a>
+             <a href="contact.php">Contacto</a>
+             <a href="register.php">Regístrate</a>
              <a href="signin.php">Iniciar sesión</a>
            </nav>
            <div id="menu-btn" class="fas fa-bars"></div>
          </div>
        
-       <section class="home" id="home">
+         <section class="home" id="home">
             <div class="content">
-               <span>Bienvenidos</span>
-               <h3>Lizbeth<br> Hair <br> Salon  </h3>
+               
             </div>
-       </section>
+         </section>
       </header>
 
       <!-- end header inner -->
@@ -79,8 +81,8 @@
             <div class="row d_flex">
                <div class="col-md-6">
                   <div class="titlepage">
-                     <h2>Nuestros servicios</h2>
-                     <p>Descubra la personificación de la excelencia en peluquería en Lizbeth Hair Salon, reconocido orgullosamente como uno de los mejores salones de belleza en Reynosa. En Lizbeth Hair Salon, contamos con un equipo élite de estilistas altamente calificados, especialistas en color y consultores de belleza que continuamente superan los límites de la creatividad y la innovación. </p>
+                     <h2>Bienvenido a Lizbeth Hair Salon</h2>
+                     <p>Descubra la personificación de la excelencia en peluquería en Lizbeth Hair Salon, reconocido orgullosamente como uno de los mejores salones de belleza en Reynosa. Somos especialistas en colorimetría y tratamientos capilares, donde la belleza de tu cabello cobra vida.</p>
                      <a class="read_more" href="we-do.html">Servicios</a>
                   </div>
                </div>
@@ -94,13 +96,13 @@
       </div>
       <!-- end about -->
 
-      <!-- experts -->
+      <!-- gallery -->
       <div  class="experts slin2">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Galería</h2>
+                     <h2>Trabajos destacados</h2>
                   </div>
                </div>
             </div>
@@ -113,8 +115,7 @@
                               <figure><img src="images/blog1.jpg" alt="#"/></figure>
                            </div>
                            <div class="meet">
-                              <h3>Jacob</h3>
-                              <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna </p>
+                              
                            </div>
                         </div>
                      </div>
@@ -124,8 +125,7 @@
                               <figure><img src="images/blog2.jpg" alt="#"/></figure>
                            </div>
                            <div class="meet">
-                              <h3>Lonut</h3>
-                              <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
+                              
                            </div>
                         </div>
                      </div>
@@ -135,8 +135,7 @@
                               <figure><img src="images/blog3.jpg" alt="#"/></figure>
                            </div>
                            <div class="meet">
-                              <h3>Irina</h3>
-                              <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
+                              
                            </div>
                         </div>
                      </div>
@@ -147,8 +146,7 @@
                               <figure><img src="images/blog4.jpg" alt="#"/></figure>
                            </div>
                            <div class="meet">
-                              <h3>Irina</h3>
-                              <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
+                              
                            </div>
                         </div>
                      </div>
@@ -160,8 +158,7 @@
                               <figure><img src="images/blog5.jpg" alt="#"/></figure>
                            </div>
                            <div class="meet">
-                              <h3>Irina</h3>
-                              <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
+                              
                            </div>
                         </div>
                      </div>
@@ -172,14 +169,12 @@
                               <figure><img src="images/blog6.jpg" alt="#"/></figure>
                            </div>
                            <div class="meet">
-                              <h3>Irina</h3>
-                              <p>Lorem ipsum dolor sit amet, iscing elit, sed do magna</p>
+                              
                            </div>
                         </div>
                      </div>
 
-                     <div class="col-md-12">
-                        <a class="read_more mar_top exper" href="Javascript:void(0)"> Read More</a>
+                     
                      </div>
                   </div>
                </div>
@@ -188,40 +183,7 @@
       </div>
       <!-- end experts -->
       <!--  contact -->
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2 id="Contatcus">Comunícate con nosotros</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6 offset-md-3">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre Completo" type="type" name="Nombre Completo"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email " type="type" name="Email "> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Número de Celular" type="type" name="Número de Celular">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="type" Mensaje="Name">Mensaje</textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Enviar</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-         <div class="container-fluid">
+             <div class="container-fluid">
             <div class="row">
                <div class="col-md-12">
                   <div class="map_main">
@@ -274,7 +236,7 @@
 
          </div>
       
-         <div class="credit"> &copy 2023 <span>Lizbeth Hair Salon</span> | Todos los derechos reservados. </div>
+         <div class="credit" id="copyright"> &copy 2023 <span>Lizbeth Hair Salon</span> | Todos los derechos reservados. </div>
       
       </section>
       <!-- end footer -->
@@ -283,7 +245,7 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/script.js"></script>
-
+      <script src="js/year.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>

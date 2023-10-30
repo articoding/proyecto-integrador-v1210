@@ -1,4 +1,7 @@
-  <!DOCTYPE html>
+<?php
+?>
+
+<!DOCTYPE html>
  <html lang="en">
   <head>
    <meta charset="UTF-8">
@@ -9,6 +12,7 @@
 
   </head>
   <body>
+         
     <div class="myformulario">
       <h1>Registro</h1>
       <form method="post" action="connect.php">
@@ -38,4 +42,4 @@
       </form>
     </div>
   </body>
-  </html>
+</html>

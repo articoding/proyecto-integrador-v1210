@@ -1,3 +1,5 @@
+<?php
+?>
     <!DOCTYPE html>
       <html lang="en">
          <head>
@@ -48,11 +50,11 @@
                </div>
                <nav class="navbar">
                   <div id="close-navbar" class="fas fa-times"></div>
-                  <a href="index.html">Inicio</a>
-                  <a href="about.html">Nosotros</a>
-                  <a href="we-do.html">Servicios</a>
-                  <a href="contact.html">Contacto</a>
-                  <a href="register.html">Regístrate</a>
+                  <a href="index.php">Inicio</a>
+                  <a href="about.php">Nosotros</a>
+                  <a href="we-do.php">Servicios</a>
+                  <a href="contact.php">Contacto</a>
+                  <a href="register.php">Regístrate</a>
                   <a href="signin.php">Iniciar sesión</a>
                </nav>
             
@@ -105,18 +107,18 @@
                            <div class="col-md-3 col-sm-61">
                               <div class="we_box1">
                                  <div class="We_doxMn">
-                                 <i><img width="100px" src="images/Serv_manicure.jpg" alt="#"/></i>
+                                 <i><img width="100px" src="images/manicura.png" alt="#"/></i>
                                  <h3>Manicure</h3>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero doloremque impedit quia labore quaerat dignissimos, placeat ex ab corrupti porro deleniti animi tempora tenetur sapiente odit consequatur. Sint, perspiciatis fugiat.</p>
+                                 <p></p>
                               </div>
                               </div>
                            </div>
                            <div class="col-md-3 col-sm-61">
                               <div class="we_box1">
                                  <div class="We_doxP">
-                                 <i><img width="100px" src="images/Serv_pedicure.jpg" alt="#"/></i>
+                                 <i><img width="100px" src="images/pedicure.png" alt="#"/></i>
                                  <h3>Pedicure</h3>
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet porro aliquid consequuntur voluptatibus officiis? Aliquam, a, quia eligendi doloremque, obcaecati maiores temporibus facere accusamus modi quod voluptatum fuga dignissimos nobis?</p>
+                                 <p>Lorem ipsum dolor sit amet, consectetur </p>
                               </div>
                               </div>
                            </div>
