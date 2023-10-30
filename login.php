@@ -15,7 +15,7 @@ include("connect.php");
             }
         
         if($count == 1){
-            header("location: index.html");
+            header("location: index.php");
         }
         else{
             echo '<script>
