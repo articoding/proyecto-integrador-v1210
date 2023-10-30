@@ -69,12 +69,9 @@
                         <a class="collapse-item" href="buttons.php">Buttons</a>
                         <a class="collapse-item" href="cards.php">Cards</a>
                         <a class="collapse-item" href="Modulos/Servicios/index.php">Servicios</a>
-<<<<<<< HEAD
-=======
                         <a class="collapse-item" href="Modulos/Contacto/index.php">Contacto</a>
 
 
->>>>>>> nocarrousel
                     </div>
                 </div>
             </li>
