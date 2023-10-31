@@ -12,9 +12,12 @@ $stm->bindParam(":Serv_name",$Serv_name);
 $stm->bindParam(":Serv_description",$Serv_description);
 $stm->bindParam(":Serv_price",$Serv_price);
 $stm->execute();
+
+
 }
 
 ?>
+
 
 
 
