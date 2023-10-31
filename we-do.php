@@ -1,6 +1,5 @@
-<?php
-?>
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
       <html lang="en">
          <head>
             <!-- basic -->
@@ -64,11 +63,11 @@
                   <div class="Scontent">
                      <h3>Servicios</h3>
                   </div>
-             </section>
+               </section>
             </header>
             <!-- end header inner -->
             <!-- end header -->
-         <!--<div class="back_re">
+            <!--<div class="back_re">
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
@@ -80,7 +79,7 @@
                </div>
             </div>-->
             <!-- what we do  -->
-            <div class="we_do slin1">
+            <!-- <div class="we_do slin1">
                <div class="container1">
                   <div class="row1">
                      <div class="col-lg-10 offset-lg-1 col-md-121">
@@ -127,7 +126,51 @@
                   </div>
                </div>
             </div>
-            <!-- end what we do  -->
+            end what we do  -->
+
+            <!-- services -->
+
+            <section class="services" id="services">
+
+               
+           
+               <div class="box-container">
+           
+                   <div class="box">
+                       <img src="images/services-1.jpg" alt="">
+                       <div class="content">
+                           <h3>Tratamientos</h3>
+                       </div>
+                   </div>
+           
+                   <div class="box">
+                       <img src="images/services-2.jpg" alt="">
+                       <div class="content">
+                           <h3>Maquillaje</h3> 
+                       </div>
+                   </div>
+           
+                   <div class="box">
+                       <img src="images/services-3.jpg" alt="">
+                       <div class="content">
+                           <h3>Manicure</h3>
+                       </div>
+                   </div>
+           
+                   <div class="box">
+                       <img src="images/services-4.jpg" alt="">
+                       <div class="content">
+                           <h3>Pestañas</h3>
+                       </div>
+                   </div>
+           
+               </div>
+           
+            </section>
+           
+          
+
+            <!-- services end -->
 
             <!--  footer -->
             <section class="footer">
@@ -182,5 +225,5 @@
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
             <script src="js/custom.js"></script>
          </body>
-      </html>
+</html>
 

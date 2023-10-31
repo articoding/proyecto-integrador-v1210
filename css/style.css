@@ -37,6 +37,8 @@
      --hover: #b6e2e2;
      --black: #111616;
      --white: #f0f7f7;
+     --light-bg:#f3efec;
+     --dark-bg:rgba(0,0,0,.7);
      --border: .1rem solid #aaa;
      --box-shadow:0 .5rem 1 rem rgb(0, 0, 0);
 
@@ -287,7 +289,14 @@ section{
      padding: 5rem 7%;
 }
 
-
+.heading{
+     text-align: center;
+     color:var(--black);
+     text-transform: none;
+     margin-bottom: 3rem;
+     font-size: 4rem;
+     margin-top: 4rem;
+}
 
 .header {
      padding: 24px;
@@ -560,6 +569,60 @@ ul.social_icon li a:hover {
 
 /** end What We Do section **/
 
+/** Services section **/
+
+.services{
+     background-color: none  ;
+}
+ 
+.services .box-container{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+     gap:2rem;
+}
+  
+.services .box-container .box{
+     height: 100%;
+     position: relative;
+     overflow: hidden;
+}
+ 
+.services .box-container .box img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+}
+  
+.services .box-container .box:hover img {
+     transform: scale(1.1);
+}
+  
+.services .box-container .box .content{
+     display: none;
+     align-items: center;
+     justify-content: center;
+     position: absolute;
+     top:0; left:0;
+     z-index: 10;
+     height: 100%;
+     width: 100%;
+     background: var(--dark-bg);
+}
+  
+.services .box-container .box .content h3{
+     text-align: center;
+     font-size: 3rem;
+     color:var(--white);
+     padding-top: 40rem;
+     text-transform: capitalize;
+}
+ 
+.services .box-container .box:hover .content{
+     display: flex;
+}
+ 
+ 
+/* services */
 
 /** end team section **/
 
@@ -653,7 +716,6 @@ margin-top: 3rem;
 .about .content .icons-container .icons{
 flex:1 1 16rem;
 text-align: center;
-background: var(--light-bg);
 padding:3rem 2rem;
 }
 
@@ -1092,7 +1154,6 @@ text-transform: capitalize;
  position: relative;
  font-size: 100px;
  color: white;
- border: solid 4px;
  left: 105%;
 /* font-family: 'BebasNeue';
  font-weight: normal;*/
