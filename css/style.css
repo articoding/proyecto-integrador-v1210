@@ -633,7 +633,7 @@ ul.social_icon li a:hover {
 
 .about .row .content h3{
 font-size: 3rem;
-color:var(--primary-color);
+color:var(--black);
 }
 
 .about .row .content p{
@@ -1044,6 +1044,7 @@ text-transform: capitalize;
  left: 200px;
  top: -350px;
  font-size: 40px;
+ 
 }
 
 .We_doxC {
