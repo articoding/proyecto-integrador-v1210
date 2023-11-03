@@ -1,3 +1,5 @@
+<?php
+?>
 
 <!DOCTYPE html>
       <html lang="en">
@@ -65,110 +67,138 @@
                   </div>
                </section>
             </header>
-            <!-- end header inner -->
             <!-- end header -->
-            <!--<div class="back_re">
+
+            <!-- Start Menu -->
+            <div class="menu-box">
                <div class="container">
                   <div class="row">
-                     <div class="col-md-12">
-                        <div class="title">
-                           <h2>Servicios</h2>
+                     <div class="col-lg-12">
+                        <div class="heading-title text-center">
+                           <h2>Nuestros servicios</h2>
+                           <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
                         </div>
                      </div>
                   </div>
-               </div>
-            </div>-->
-            <!-- what we do  -->
-            <!-- <div class="we_do slin1">
-               <div class="container1">
-                  <div class="row1">
-                     <div class="col-lg-10 offset-lg-1 col-md-121">
-                        <div class="row1">
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxC">
-                                 <i><img width="100px" src="images/Ser_corte.jpg" alt="#"/></i>
-                                 <h3>Corte de pelo</h3>
-                                 <p>Largos, cortos, asimétricos o rectos de precisión, nos encanta ofrecer a nuestros clientes cortes que acentúen quiénes son y les permitan refinar su estilo personal. En Lizbeth Hair Salon tenemos una variedad de cortes y estilos para tu cabello que seguro te encantaran.
-                                 </p>
-                              </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxM">
-                                 <i><img width="100px" src="images/Serv_maquillaje.jpg" alt="#"/></i>
-                                 <h3>Maquillaje</h3>
-                                 <p>Una cita. Cócteles con las chicas. Una reunión importante. No importa lo que tengas planeado, nuestros especialistas en maquillaje pueden ayudarte a conseguir el glamour que te mereces. Conocemos las últimas tendencias y los colores de moda, y nos gusta compartir consejos y trucos para resaltar tus atributos naturales.</p>
-                              </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxMn">
-                                 <i><img width="100px" src="images/manicura.png" alt="#"/></i>
-                                 <h3>Manicure</h3>
-                                 <p></p>
-                              </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxP">
-                                 <i><img width="100px" src="images/pedicure.png" alt="#"/></i>
-                                 <h3>Pedicure</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur </p>
-                              </div>
-                              </div>
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="special-menu text-center">
+                           <div class="button-group filter-button-group">
+                              <button class="active" data-filter="*">Todas</button>
+                              <button data-filter=".drinks">Piel</button>
+                              <button data-filter=".lunch">Manos</button>
+                              <button data-filter=".dinner">Cabello</button>
+                              <button data-filter=".nails">Cuerpo</button>
+
                            </div>
                         </div>
                      </div>
+                  </div>
+                     
+                  <div class="row special-list">
+                     <div class="col-lg-4 col-md-6 special-grid drinks">
+                        <div class="gallery-single fix">
+                           <img src="images/img-01.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Drinks 1</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $7.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid drinks">
+                        <div class="gallery-single fix">
+                           <img src="images/img-02.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Drinks 2</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $9.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid drinks">
+                        <div class="gallery-single fix">
+                           <img src="images/img-03.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Drinks 3</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $10.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid lunch">
+                        <div class="gallery-single fix">
+                           <img src="images/img-04.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Lunch 1</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $15.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid lunch">
+                        <div class="gallery-single fix">
+                           <img src="images/img-05.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Lunch 2</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $18.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid lunch">
+                        <div class="gallery-single fix">
+                           <img src="images/img-06.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Lunch 3</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $20.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                        <div class="gallery-single fix">
+                           <img src="images/img-07.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 1</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $25.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                        <div class="gallery-single fix">
+                           <img src="images/img-08.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 2</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $22.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                        <div class="gallery-single fix">
+                           <img src="images/img-09.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 3</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $24.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
                   </div>
                </div>
             </div>
-            end what we do  -->
-
-            <!-- services -->
-
-            <section class="services" id="services">
-
-               
-           
-               <div class="box-container">
-           
-                   <div class="box">
-                       <img src="images/services-1.jpg" alt="">
-                       <div class="content">
-                           <h3>Tratamientos</h3>
-                       </div>
-                   </div>
-           
-                   <div class="box">
-                       <img src="images/services-2.jpg" alt="">
-                       <div class="content">
-                           <h3>Maquillaje</h3> 
-                       </div>
-                   </div>
-           
-                   <div class="box">
-                       <img src="images/services-3.jpg" alt="">
-                       <div class="content">
-                           <h3>Manicure</h3>
-                       </div>
-                   </div>
-           
-                   <div class="box">
-                       <img src="images/services-4.jpg" alt="">
-                       <div class="content">
-                           <h3>Pestañas</h3>
-                       </div>
-                   </div>
-           
-               </div>
-           
-            </section>
-           
-          
+            <!-- End Menu -->
 
             <!-- services end -->
 
@@ -220,6 +250,7 @@
             <script src="js/bootstrap.bundle.min.js"></script>
             <script src="js/jquery-3.0.0.min.js"></script>
             <script src="js/script.js"></script>
+            <script src="js/custom1.js"></script>
 
             <!-- sidebar -->
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
