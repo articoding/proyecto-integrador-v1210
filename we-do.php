@@ -1,3 +1,15 @@
+<?php
+
+require 'config/databaseServices.php';
+$db = new Database();
+$con = $db->conectar();
+
+$sql = $con->prepare("SELECT Serv_name, Serv_description, Serv_price FROM services WHERE Serv_activo=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 
 <!DOCTYPE html>
       <html lang="en">
@@ -132,18 +144,30 @@
 
             <section class="services" id="services">
 
-               
+               <?php foreach($resultado as $row) { ?>
            
                <div class="box-container">
            
                    <div class="box">
-                       <img src="images/services-1.jpg" alt="">
+                     <?php
+
+                     $id = $row['idServices'];
+                     $imagen = "images/Servicios/" . $id . "/services-1.jpg";
+
+                     if(!file_exists($imagen)){
+                        $imagen = "images/no-photo.png";
+                     }
+
+                     ?>
+                       <img src="<?php echo $imagen; ?>">
                        <div class="content">
-                           <h3>Tratamientos</h3>
+                           <h3><?php echo $row['Serv_name'] ?></h3>
+                           <p><?php echo $row['Serv_description'] ?></p>
+                           <p><?php echo $row['Serv_price'] ?></p>
                        </div>
                    </div>
            
-                   <div class="box">
+                   <!--<div class="box">
                        <img src="images/services-2.jpg" alt="">
                        <div class="content">
                            <h3>Maquillaje</h3> 
@@ -162,9 +186,11 @@
                        <div class="content">
                            <h3>Pestañas</h3>
                        </div>
-                   </div>
+                   </div>-->
            
                </div>
+
+           <?php } ?>
            
             </section>
            
