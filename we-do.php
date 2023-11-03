@@ -1,14 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-require 'config/databaseServices.php';
-$db = new Database();
-$con = $db->conectar();
-
-$sql = $con->prepare('SELECT Serv_name, Serv_description, Serv_price, FROM services WHERE Serv_activo=1');
-$sql->execute();
-$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
-=======
    require 'config/databaseServices.php';
    $db = new Database();
    $con = $db->conectar();
@@ -16,7 +7,6 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
    $sql = $con->prepare("SELECT idServices, Serv_name, Serv_description, Serv_price, Serv_img FROM services WHERE Serv_activo=1");
    $sql->execute();
    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
->>>>>>> nocarrousel
 
 ?>
 
@@ -97,58 +87,13 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <div class="heading-title text-center">
                            <h2>Nuestros servicios</h2>
                            <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
+                     <div class="col-lg-12">
+                        <div class="heading-title text-center">
+                           <h2>Nuestros servicios</h2>
+                           <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
                         </div>
                      </div>
                   </div>
-<<<<<<< HEAD
-               </div>
-            </div>-->
-            <!-- what we do  -->
-            <div class="we_do slin1">
-               <div class="container1">
-                  <div class="row1">
-                   
-                     <div class="col-lg-10 offset-lg-1 col-md-121">
-                        <div class="row1">
-                           <div class="col-md-3 col-sm-61">
-                           <?php foreach($resultado as $row) { ?>
-                              <div class="we_box1">
-                                 <div class="We_doxC">
-                                 <i><img width="100px" src="images/Ser_corte.jpg" alt="#"/></i>
-                                 <h3>Corte de pelo</h3>
-                                 <p>Largos, cortos, asimétricos o rectos de precisión, nos encanta ofrecer a nuestros clientes cortes que acentúen quiénes son y les permitan refinar su estilo personal. En Lizbeth Hair Salon tenemos una variedad de cortes y estilos para tu cabello que seguro te encantaran.
-                                 </p>
-                              </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxM">
-                                 <i><img width="100px" src="images/Serv_maquillaje.jpg" alt="#"/></i>
-                                 <h3>Maquillaje</h3>
-                                 <p>Una cita. Cócteles con las chicas. Una reunión importante. No importa lo que tengas planeado, nuestros especialistas en maquillaje pueden ayudarte a conseguir el glamour que te mereces. Conocemos las últimas tendencias y los colores de moda, y nos gusta compartir consejos y trucos para resaltar tus atributos naturales.</p>
-                              </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxMn">
-                                 <i><img width="100px" src="images/manicura.png" alt="#"/></i>
-                                 <h3>Manicure</h3>
-                                 <p></p>
-                              </div>
-                              </div>
-                           </div>
-                           <div class="col-md-3 col-sm-61">
-                              <div class="we_box1">
-                                 <div class="We_doxP">
-                                 <i><img width="100px" src="images/pedicure.png" alt="#"/></i>
-                                 <h3>Pedicure</h3>
-                                 <p>Lorem ipsum dolor sit amet, consectetur </p>
-                              </div>
-                              </div>
-                              <?php } ?>
-=======
                   <div class="row">
                      <div class="col-lg-12">
                         <div class="special-menu text-center">
@@ -159,11 +104,9 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                               <button data-filter=".dinner">Cabello</button>
                               <button data-filter=".nails">Cuerpo</button>
 
->>>>>>> nocarrousel
                            </div>
                         </div>
                      </div>
-                     
                   </div>
                   <?php foreach($resultado as $row) { ?>
                   <div class="row special-list">

@@ -10,7 +10,7 @@
             $count = mysqli_num_rows($result);
             
                 if ($row["usertype"]=="user") {
-                    header("location: index.html");
+                    header("location: index.php");
                 }
                 
                 elseif($row["usertype"]=="admin")
@@ -26,17 +26,6 @@
             }
         }
         
-<<<<<<< HEAD
-=======
-        if($count == 1){
-            header("location: index.php");
-        }
-        else{
-            echo '<script>
-                window.location.href = "signin.php";
-                alert("Inicio de sesión fallido. Contraseña o usuario incorrecto");
-            </script>';
->>>>>>> nocarrousel
     
         
     ?>
