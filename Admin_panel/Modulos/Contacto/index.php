@@ -17,7 +17,7 @@ if(isset($_GET['idContact'])){
 ?>
 
 
-<?php include("../../Templates/header.php"); ?>
+<?php include("../../Templates/h.php"); ?>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
   Nuevo
@@ -25,7 +25,7 @@ if(isset($_GET['idContact'])){
 
 <div class="table-responsive">
     <table class="table table-white">
-        <thead>
+        <thead class="table table-dark">
             <tr>
                 <th scope="col">Contacto ID</th>
                 <th scope="col">Nombre</th>
@@ -59,4 +59,4 @@ if(isset($_GET['idContact'])){
 <?php include("create.php"); ?>
 
 
-<?php include("../../Templates/footer.php"); ?>
+<?php include("../../Templates/f.php"); ?>

@@ -1,4 +1,13 @@
 <?php
+
+require 'config/databaseServices.php';
+$db = new Database();
+$con = $db->conectar();
+
+$sql = $con->prepare('SELECT Serv_name, Serv_description, Serv_price, FROM services WHERE Serv_activo=1');
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
     <!DOCTYPE html>
       <html lang="en">
@@ -83,9 +92,11 @@
             <div class="we_do slin1">
                <div class="container1">
                   <div class="row1">
+                   
                      <div class="col-lg-10 offset-lg-1 col-md-121">
                         <div class="row1">
                            <div class="col-md-3 col-sm-61">
+                           <?php foreach($resultado as $row) { ?>
                               <div class="we_box1">
                                  <div class="We_doxC">
                                  <i><img width="100px" src="images/Ser_corte.jpg" alt="#"/></i>
@@ -121,9 +132,11 @@
                                  <p>Lorem ipsum dolor sit amet, consectetur </p>
                               </div>
                               </div>
+                              <?php } ?>
                            </div>
                         </div>
                      </div>
+                     
                   </div>
                </div>
             </div>
