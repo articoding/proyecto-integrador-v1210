@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 require 'config/databaseServices.php';
 $db = new Database();
 $con = $db->conectar();
@@ -7,9 +8,20 @@ $con = $db->conectar();
 $sql = $con->prepare('SELECT Serv_name, Serv_description, Serv_price, FROM services WHERE Serv_activo=1');
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+=======
+   require 'config/databaseServices.php';
+   $db = new Database();
+   $con = $db->conectar();
+
+   $sql = $con->prepare("SELECT idServices, Serv_name, Serv_description, Serv_price, Serv_img FROM services WHERE Serv_activo=1");
+   $sql->execute();
+   $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+>>>>>>> nocarrousel
 
 ?>
-    <!DOCTYPE html>
+
+
+<!DOCTYPE html>
       <html lang="en">
          <head>
             <!-- basic -->
@@ -73,19 +85,22 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                   <div class="Scontent">
                      <h3>Servicios</h3>
                   </div>
-             </section>
+               </section>
             </header>
-            <!-- end header inner -->
             <!-- end header -->
-         <!--<div class="back_re">
+
+            <!-- Start Menu -->
+            <div class="menu-box">
                <div class="container">
                   <div class="row">
-                     <div class="col-md-12">
-                        <div class="title">
-                           <h2>Servicios</h2>
+                     <div class="col-lg-12">
+                        <div class="heading-title text-center">
+                           <h2>Nuestros servicios</h2>
+                           <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
                         </div>
                      </div>
                   </div>
+<<<<<<< HEAD
                </div>
             </div>-->
             <!-- what we do  -->
@@ -133,14 +148,138 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                               </div>
                               </div>
                               <?php } ?>
+=======
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="special-menu text-center">
+                           <div class="button-group filter-button-group">
+                              <button class="active" data-filter="*">Todas</button>
+                              <button data-filter=".drinks">Piel</button>
+                              <button data-filter=".lunch">Manos</button>
+                              <button data-filter=".dinner">Cabello</button>
+                              <button data-filter=".nails">Cuerpo</button>
+
+>>>>>>> nocarrousel
                            </div>
                         </div>
                      </div>
                      
                   </div>
+                  <?php foreach($resultado as $row) { ?>
+                  <div class="row special-list">
+                     <div class="col-lg-4 col-md-6 special-grid drinks">
+                        <div class="gallery-single fix">
+                        <?php
+                           $id = $row['idServices'];
+                           $imagen = "images/Servicios/" . $id . "/principal.jpg";
+
+                           if(!file_exists($imagen)){
+                              $imagen = "images/no-photo.png";
+                           }
+                           ?>
+                           <img src="<?php echo $imagen; ?>" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4><?php echo $row['Serv_name'] ?></h4>
+                              <p><?php echo $row['Serv_description'] ?></p>
+                              <h5><?php echo $row['Serv_price'] ?></h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <!--<div class="col-lg-4 col-md-6 special-grid drinks">
+                        <div class="gallery-single fix">
+                           <img src="images/img-02.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Drinks 2</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $9.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid drinks">
+                        <div class="gallery-single fix">
+                           <img src="images/img-03.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Drinks 3</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $10.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid lunch">
+                        <div class="gallery-single fix">
+                           <img src="images/img-04.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Lunch 1</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $15.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid lunch">
+                        <div class="gallery-single fix">
+                           <img src="images/img-05.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Lunch 2</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $18.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid lunch">
+                        <div class="gallery-single fix">
+                           <img src="images/img-06.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Lunch 3</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $20.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                        <div class="gallery-single fix">
+                           <img src="images/img-07.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 1</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $25.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                        <div class="gallery-single fix">
+                           <img src="images/img-08.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 2</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $22.79</h5>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                        <div class="gallery-single fix">
+                           <img src="images/img-09.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 3</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $24.79</h5>
+                           </div>
+                        </div>
+                     </div>-->
+                     
+                  </div>
+                  <?php } ?>
                </div>
             </div>
-            <!-- end what we do  -->
+           <!--end what we do-->  
+
 
             <!--  footer -->
             <section class="footer">
@@ -190,10 +329,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <script src="js/bootstrap.bundle.min.js"></script>
             <script src="js/jquery-3.0.0.min.js"></script>
             <script src="js/script.js"></script>
+            <script src="js/custom1.js"></script>
 
             <!-- sidebar -->
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
             <script src="js/custom.js"></script>
          </body>
-      </html>
+</html>
 

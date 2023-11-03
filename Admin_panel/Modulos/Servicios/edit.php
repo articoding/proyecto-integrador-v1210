@@ -12,6 +12,7 @@ if (isset($_GET['idServices'])){
   $Serv_name=$registro['Serv_name'];
   $Serv_description=$registro['Serv_description'];
   $Serv_price=$registro['Serv_price'];
+  $Serv_img=$registro['Serv_img'];
   }
   
   if ($_POST) {
@@ -19,11 +20,13 @@ if (isset($_GET['idServices'])){
     $Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
     $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
     $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
+    $Serv_img=(isset($_POST['Serv_img'])?$_POST['Serv_img']:"");
     
-    $stm=$conexion->prepare("UPDATE services SET Serv_name=:Serv_name,Serv_description=:Serv_description,Serv_price=:Serv_price WHERE idServices=:txtidServices");
+    $stm=$conexion->prepare("UPDATE services SET Serv_name=:Serv_name,Serv_description=:Serv_description,Serv_price=:Serv_price,Serv_img=:Serv_img WHERE idServices=:txtidServices");
     $stm->bindParam(":Serv_name",$Serv_name);
     $stm->bindParam(":Serv_description",$Serv_description);
     $stm->bindParam(":Serv_price",$Serv_price);
+    $stm->bindParam(":Serv_img",$Serv_img);
     $stm->bindParam(":txtidServices",$txtidServices);
     
     $stm->execute();
@@ -49,6 +52,10 @@ if (isset($_GET['idServices'])){
 
         <label for="">Precio</label>
         <input type="text" class="form-control" name="Serv_price" placeholder="Ingresar datos" value="<?php echo $Serv_price; ?>">
+        <br>
+
+        <label for="">Imagen</label>
+        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" name="Serv_img" placeholder="Cargar Imagen" value="<?php echo $Serv_img; ?>">
       </div>
       <div class="modal-footer">
         <a href="index.php" class="btn btn-danger">Cancelar</a>

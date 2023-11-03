@@ -29,4 +29,8 @@ function conectar() {
 
 }
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> nocarrousel

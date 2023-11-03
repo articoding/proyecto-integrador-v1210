@@ -25,6 +25,7 @@ header("location: index.php");
 <?php include("../../Templates/header.php"); ?>
 
 
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
   Nuevo
@@ -38,6 +39,7 @@ header("location: index.php");
         <th scope="col">Nombre</th>
         <th scope="col">Descripcion</th>
         <th scope="col">Precio</th>
+        <th scope="col">Imagen</th>
         <th scope="col">Acciones</th>
       </tr>
     </thead>
@@ -48,6 +50,7 @@ header("location: index.php");
         <td><?php echo $servicio['Serv_name']; ?></td>
         <td><?php echo $servicio['Serv_description']; ?></td>
         <td><?php echo $servicio['Serv_price']; ?></td>
+        <td><?php echo $servicio['Serv_img']; ?></td>
         <td>
 
         <a href="edit.php?idServices=<?php echo $servicio['idServices']; ?>" class="btn btn-success">Editar</a>
