@@ -5,12 +5,14 @@ if ($_POST) {
 $Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
 $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
 $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
+$Serv_img=(isset($_POST['Serv_img'])?$_POST['Serv_img']:"");
 
-$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price)");
+$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
 
 $stm->bindParam(":Serv_name",$Serv_name);
 $stm->bindParam(":Serv_description",$Serv_description);
 $stm->bindParam(":Serv_price",$Serv_price);
+$stm->bindParam(":Serv_img",$Serv_img);
 $stm->execute();
 }
 
@@ -40,6 +42,10 @@ $stm->execute();
 
         <label for="">Precio</label>
         <input type="text" class="form-control" name="Serv_price" placeholder="Ingresar datos">
+        <br>
+
+        <label for="">Imagen</label>
+        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" name="Serv_img" placeholder="Cargar Imagen" value="<?php echo $Serv_img; ?>">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
