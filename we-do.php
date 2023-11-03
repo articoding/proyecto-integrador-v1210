@@ -4,7 +4,7 @@
    $db = new Database();
    $con = $db->conectar();
 
-   $sql = $con->prepare("SELECT Serv_name, Serv_description, Serv_price, Serv_img FROM services WHERE Serv_activo=1");
+   $sql = $con->prepare("SELECT idServices, Serv_name, Serv_description, Serv_price, Serv_img FROM services WHERE Serv_activo=1");
    $sql->execute();
    $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -109,8 +109,8 @@
                      <div class="col-lg-4 col-md-6 special-grid drinks">
                         <div class="gallery-single fix">
                         <?php
-                           $id = $row['Serv_img'];
-                           $imagen = "images/Servicios/" . $id . "/services-1.jpg";
+                           $id = $row['idServices'];
+                           $imagen = "images/Servicios/" . $id . "/principal.jpg";
 
                            if(!file_exists($imagen)){
                               $imagen = "images/no-photo.png";
@@ -219,13 +219,6 @@
             </div>
            <!--end what we do-->  
 
-            <!-- services -->
-
-           
-           
-          
-
-            <!-- services end -->
 
             <!--  footer -->
             <section class="footer">

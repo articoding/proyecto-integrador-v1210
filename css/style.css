@@ -1202,6 +1202,27 @@ text-transform: capitalize;
     box-shadow: 0 0 10px #ccc;
 }
 
+.gallery-single {
+     width: 100%; /* Set the width of the container */
+     padding-bottom: 75%; /* 4:3 aspect ratio (3 divided by 4 gives 0.75 or 75%) */
+     overflow: hidden;
+
+}
+
+.gallery-single img{
+     position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+
 .why-text {
     position: absolute;
     left: 0;
@@ -1237,3 +1258,6 @@ text-transform: capitalize;
 .gallery-single:hover .why-text{
 	bottom: 0px;
 }
+
+
+
