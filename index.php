@@ -83,7 +83,7 @@
                   <div class="titlepage">
                      <h2>Bienvenido a Lizbeth Hair Salon</h2>
                      <p>Descubra la personificación de la excelencia en peluquería en Lizbeth Hair Salon, reconocido orgullosamente como uno de los mejores salones de belleza en Reynosa. Somos especialistas en colorimetría y tratamientos capilares, donde la belleza de tu cabello cobra vida.</p>
-                     <a class="read_more" href="we-do.html">Servicios</a>
+                     <a class="read_more" href="we-do.php">Servicios</a>
                   </div>
                </div>
                <div class="col-md-6">
