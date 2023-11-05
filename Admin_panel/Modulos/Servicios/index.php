@@ -33,9 +33,9 @@ header("location: index.php");
 
   <div class="table-responsive">
   <table class="table">
-    <thead class="table table-dark">
+    <thead class="table table-white">
       <tr>
-        <th scope="col">id</th>
+        <th scope="col">ID</th>
         <th scope="col">Nombre</th>
         <th scope="col">Descripcion</th>
         <th scope="col">Precio</th>

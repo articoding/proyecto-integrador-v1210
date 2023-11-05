@@ -25,9 +25,9 @@ if(isset($_GET['idContact'])){
 
 <div class="table-responsive">
     <table class="table table-white">
-        <thead class="table table-dark">
+        <thead class="table table-white">
             <tr>
-                <th scope="col">Contacto ID</th>
+                <th scope="col">ID</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Sociales</th>

@@ -106,9 +106,9 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Addons
-            </div>
+            </div> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
