@@ -65,7 +65,7 @@
                   <a href="about.php">Nosotros</a>
                   <a href="we-do.php">Servicios</a>
                   <a href="contact.php">Contacto</a>
-                  <a href="/easyappointments/">Citas</a>
+                  <a href="easyappointments/">Citas</a>
                   <a href="signin.php">Iniciar sesión</a>
                </nav>
             
@@ -83,10 +83,6 @@
             <div class="menu-box">
                <div class="container">
                   <div class="row">
-                     <div class="col-lg-12">
-                        <div class="heading-title text-center">
-                           <h2>Nuestros servicios</h2>
-                           <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
                      <div class="col-lg-12">
                         <div class="heading-title text-center">
                            <h2>Nuestros servicios</h2>
@@ -114,7 +110,7 @@
                         <div class="gallery-single fix">
                         <?php
                            $id = $row['idServices'];
-                           $imagen = "images/Servicios/" . $id . "/principal.jpg";
+                           $imagen = $row['Serv_img'];
 
                            if(!file_exists($imagen)){
                               $imagen = "images/no-photo.png";
@@ -277,6 +273,7 @@
             <!-- sidebar -->
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
             <script src="js/custom.js"></script>
+            <?php include("Admin_panel/Modulos/Servicios/create.php"); ?>
          </body>
 </html>
 
