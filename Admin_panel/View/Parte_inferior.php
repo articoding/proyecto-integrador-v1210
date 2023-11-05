@@ -32,7 +32,7 @@
                 </div>
                 <div class="modal-body">Haz clic en "Cerrar sesión" abajo si estás lista para salir.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
                     <a class="btn btn-primary" href="login.html">Cerrar sesion</a>
                 </div>
             </div>
