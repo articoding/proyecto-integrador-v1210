@@ -17,7 +17,7 @@ if(isset($_GET['idContact'])){
 ?>
 
 
-<?php include("../../Templates/header.php"); ?>
+<?php include("../../Templates/header2.php"); ?>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
   Nuevo
@@ -46,8 +46,8 @@ if(isset($_GET['idContact'])){
                 <td><?php echo $contact['contact_phone']; ?></td>
                 <td><?php echo $contact['contact_email']; ?></td>
                 <td>
-                <a href="edit.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-success">Editar</a>
-                <a href="index.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-danger">Eliminar</a>
+                <a href="edit.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-success">Editar</a> <br>
+                <a href="index.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-danger">Eliminar</a> <br>
 
 
                 </td>

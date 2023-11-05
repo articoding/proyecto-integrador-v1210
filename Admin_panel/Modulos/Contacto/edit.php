@@ -38,7 +38,7 @@
 
 ?>
 
-<?php include("../../Templates/header.php"); ?>
+<?php include("../../Templates/header2.php"); ?>
 
 
     <form action="" method="post">
@@ -56,9 +56,9 @@
             <input type="text" class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Ingresa tu email">
         </div>
         <div class="modal-footer">
-            <a href="index.php" class="btn btn-danger">Cancelar</a>
+            <a href="index.php" class="btn btn-danger">Cancelar</a>     
             <button type="submit" class="btn btn-primary">Actualizar</button>
         </div>
     </form>
 
-<?php include("../../Templates/footer.php"); ?>
+<?php include("../../Templates/footer2.php"); ?>
