@@ -9,13 +9,16 @@ if($_POST){
     $sociales = (isset($_POST['sociales']) ? $_POST['sociales'] : "");
     $telefono = (isset($_POST['telefono']) ? $_POST['telefono'] : "");
     $email = (isset($_POST['email']) ? $_POST['email'] : "");
+    $fecharegistro = (isset($_POST['fecharegistro'])?$_POST['fecharegistro']:"");
 
-    $stm = $conexion->prepare("INSERT INTO contact_us (contact_name, contact_ubication, contact_social, contact_phone, contact_email) VALUES (:nombre, :direccion, :sociales, :telefono, :email)");
+
+    $stm = $conexion->prepare("INSERT INTO contact_us (contact_name, contact_ubication, contact_social, contact_phone, contact_email, contact_register) VALUES (:nombre, :direccion, :sociales, :telefono, :email, :fecharegistro)");
     $stm->bindParam(':nombre', $nombre);
     $stm->bindParam(':direccion', $direccion);
     $stm->bindParam(':sociales', $sociales);
     $stm->bindParam(':telefono', $telefono);
     $stm->bindParam(':email', $email);
+    $stm->bindParam(':fecharegistro', $fecharegistro);
     $stm->execute();
 
 }
@@ -45,6 +48,8 @@ if($_POST){
         <input type="text" class="form-control" name="telefono" value="" placeholder="Ingresa tu teléfono" >
         <label for="">Email</label>
         <input type="text" class="form-control" name="email" value="" placeholder="Ingresa tu email">
+        <label for="">Fecha de registro</label>
+        <input type="text" class="form-control" name="fecharegistro" value="" placeholder="Ingresa tu fecha de registro" >
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

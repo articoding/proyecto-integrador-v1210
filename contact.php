@@ -73,8 +73,11 @@
                   </div>
                </div>
             </div>
+            
          </div>
       </div>
+
+      
       <!--  contact -->
       <div class="contact">
          <div class="container">
@@ -83,17 +86,21 @@
                   <form id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre Completo" type="type" name="Nombre Completo"> 
+                           <input class="contactus" placeholder="Nombre Completo" type="type" name="name"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email " type="type" name="Email "> 
+                           <input class="contactus" placeholder="Dirección" type="type" name="address "> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Número de Celular" type="type" name="Número de Celular">                          
+                           <input class="contactus" placeholder="Redes Sociales " type="type" name="social "> 
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="type" Mensaje="Name">Mensaje</textarea>
+                           <input class="contactus" placeholder="Número de Celular" type="type" name="cellphone">                          
                         </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email " type="type" name="email "> 
+                        </div>
+                        
                         <div class="col-md-12">
                            <button class="send_btn">Enviar</button>
                         </div>

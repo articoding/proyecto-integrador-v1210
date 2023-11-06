@@ -13,6 +13,7 @@
         $sociales = $registro['contact_social'];
         $telefono = $registro['contact_phone'];
         $email = $registro['contact_email'];
+        $fecharegistro = $registro['contact_register'];
     }
 
     if($_POST){
@@ -22,14 +23,16 @@
         $sociales = (isset($_POST['sociales'])?$_POST['sociales']:"");
         $telefono = (isset($_POST['telefono'])?$_POST['telefono']:"");
         $email = (isset($_POST['email'])?$_POST['email']:"");
+        $fecharegistro = (isset($_POST['fecharegistro'])?$_POST['fecharegistro']:"");
 
-        $stm = $conexion->prepare("UPDATE contact_us SET contact_name = :nombre, contact_ubication = :direccion, contact_social = :sociales, contact_phone = :telefono, contact_email = :email WHERE idContact = :txtidContact");
+        $stm = $conexion->prepare("UPDATE contact_us SET contact_name = :nombre, contact_ubication = :direccion, contact_social = :sociales, contact_phone = :telefono, contact_email = :email, contact_register = :fecharegistro WHERE idContact = :txtidContact");
         $stm->bindParam(":txtidContact",$txtidContact);
         $stm->bindParam(":nombre",$nombre);
         $stm->bindParam(":direccion",$direccion);
         $stm->bindParam(":sociales",$sociales);
         $stm->bindParam(":telefono",$telefono);
         $stm->bindParam(":email",$email);
+        $stm->bindParam(":fecharegistro",$fecharegistro);
         $stm->execute();
         header("location: index.php");
 
@@ -54,6 +57,8 @@
             <input type="text" class="form-control" name="telefono" value="<?php echo $telefono; ?>" placeholder="Ingresa tu teléfono" >
             <label for="">Email</label>
             <input type="text" class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Ingresa tu email">
+            <label for="">Fecha de registro</label>
+            <input type="text" class="form-control" name="fecharegistro" value="<?php echo $fecharegistro; ?>" placeholder="Ingresa tu fecha de registro" >
         </div>
         <div class="modal-footer">
             <a href="index.php" class="btn btn-danger">Cancelar</a>     

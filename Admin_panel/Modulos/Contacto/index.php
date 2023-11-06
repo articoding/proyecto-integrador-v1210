@@ -33,6 +33,9 @@ if(isset($_GET['idContact'])){
                 <th scope="col">Sociales</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Email</th>
+                <th scope="col">Fecha de registro</th>
+
+
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -45,6 +48,7 @@ if(isset($_GET['idContact'])){
                 <td><?php echo $contact['contact_social']; ?></td>
                 <td><?php echo $contact['contact_phone']; ?></td>
                 <td><?php echo $contact['contact_email']; ?></td>
+                <td><?php echo $contact['contact_register']; ?></td>
                 <td>
                 <a href="edit.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-success">Editar</a> <br>
                 <a href="index.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-danger">Eliminar</a> <br>
