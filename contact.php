@@ -1,5 +1,3 @@
-<?php
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,29 +81,33 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6 offset-md-3">
-                  <form id="request" class="main_form">
+                  <form id="request" class="main_form" method="post">
+                     <!-- <h1>¿Deseas ponerte en contacto con nosotros?</h1>
+                     <h2>Ingresa tu información para darte seguimiento</h2> -->
                      <div class="row">
                         <div class="col-md-12 ">
                            <input class="contactus" placeholder="Nombre Completo" type="type" name="name"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Dirección" type="type" name="address "> 
+                           <input class="contactus" placeholder="Dirección" type="type" name="address"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Redes Sociales " type="type" name="social "> 
+                           <input class="contactus" placeholder="Redes Sociales " type="type" name="social"> 
                         </div>
                         <div class="col-md-12">
                            <input class="contactus" placeholder="Número de Celular" type="type" name="cellphone">                          
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email " type="type" name="email "> 
+                           <input class="contactus" placeholder="Email " type="type" name="email"> 
                         </div>
-                        
                         <div class="col-md-12">
-                           <button class="send_btn">Enviar</button>
+                           <button class="send_btn" input type="submit" name="register">Enviar</button>
                         </div>
                      </div>
                   </form>
+                  <?php 
+                     include "configcontact/register.php"
+                  ?>
                </div>
             </div>
          </div>
