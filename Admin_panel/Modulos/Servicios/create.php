@@ -7,7 +7,7 @@ $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:
 $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
 $Serv_img=(isset($_POST['Serv_img'])?$_POST['Serv_img']:"");
 
-$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
+$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
 
 $stm->bindParam(":Serv_name",$Serv_name);
 $stm->bindParam(":Serv_description",$Serv_description);
