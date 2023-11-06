@@ -13,7 +13,7 @@
             $resultado = mysqli_query($conn,$consulta);
             if($resultado){
                 ?>
-                <h3 class="ok">¡Te has inscripto correctamente!</h3>
+                <h3 class="ok">¡Nos pondremos en contacto contigo! Gracias</h3>
                 <?php
             } else {
                 ?>
@@ -22,7 +22,7 @@
             }
         }   else {
             ?>
-            <h3 class="bad">¡Por favor complete los campos!</h3>
+            <h3 class="bad">¡Por favor completa los campos!</h3>
             <?php
         }
     }
