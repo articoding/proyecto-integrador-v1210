@@ -52,8 +52,6 @@ if(isset($_GET['idContact'])){
                 <td>
                 <a href="edit.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-success">Editar</a> <br>
                 <a href="index.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-danger">Eliminar</a> <br>
-
-
                 </td>
             </tr>
         <?php } ?>   
