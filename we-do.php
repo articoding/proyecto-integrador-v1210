@@ -95,10 +95,10 @@
                         <div class="special-menu text-center">
                            <div class="button-group filter-button-group">
                               <button class="active" data-filter="*">Todas</button>
-                              <button data-filter=".drinks">Piel</button>
-                              <button data-filter=".lunch">Manos</button>
-                              <button data-filter=".dinner">Cabello</button>
-                              <button data-filter=".nails">Cuerpo</button>
+                              <button data-filter=".piel">Piel</button>
+                              <button data-filter=".manos">Manos</button>
+                              <button data-filter=".cabello">Cabello</button>
+                              <button data-filter=".cuerpo">Cuerpo</button>
 
                            </div>
                         </div>
@@ -125,7 +125,7 @@
                         </div>
                      </div>
                      
-                     <!--<div class="col-lg-4 col-md-6 special-grid drinks">
+                     <div class="col-lg-4 col-md-6 special-grid drinks">
                         <div class="gallery-single fix">
                            <img src="images/img-02.jpg" class="img-fluid" alt="Image">
                            <div class="why-text">
@@ -211,7 +211,7 @@
                               <h5> $24.79</h5>
                            </div>
                         </div>
-                     </div>-->
+                     </div>
                      
                   </div>
                   <?php } ?>

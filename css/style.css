@@ -344,7 +344,7 @@ section{
      min-height: 100vh;
      display: flex;
      align-items: center;
-     background: url(../images/salon.png);
+     background: url(../images/lizbeth.jpg);
      background-size: cover;
      background-position: center ;
 }
@@ -1220,8 +1220,6 @@ text-transform: capitalize;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-
-
 
 .why-text {
     position: absolute;
