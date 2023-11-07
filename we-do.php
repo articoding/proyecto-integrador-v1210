@@ -99,7 +99,6 @@
                               <button data-filter=".manos">Manos</button>
                               <button data-filter=".cabello">Cabello</button>
                               <button data-filter=".cuerpo">Cuerpo</button>
-
                            </div>
                         </div>
                      </div>
