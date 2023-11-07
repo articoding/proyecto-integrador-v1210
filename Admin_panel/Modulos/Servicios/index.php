@@ -53,6 +53,7 @@ header("location: index.php");
         <td><?php echo $servicio['Serv_img']; ?></td>
         <td>
 
+
         <a href="edit.php?idServices=<?php echo $servicio['idServices']; ?>" class="btn btn-success">Editar</a>
         <a href="index.php?idServices=<?php echo $servicio['idServices']; ?>" class="btn btn-danger">Eliminar</a>
 

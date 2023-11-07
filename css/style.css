@@ -1073,23 +1073,7 @@ text-transform: capitalize;
      font-size: 4.5rem;
 }
 
-.Shome {
- min-height: 100vh;
- display: flex;
- align-items: center;
- background: url(../images/Estetica_fondo.jpg);
- background-size: cover;
- background-position: center;
-}
 
-.Shome h3 {
- position: relative;
- font-size: 100px;
- color: white;
- left: 105%;
-/* font-family: 'BebasNeue';
- font-weight: normal;*/
-}
 
 .We_doxMn {
  position: relative;

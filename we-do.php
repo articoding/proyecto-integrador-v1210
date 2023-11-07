@@ -1,13 +1,34 @@
 <?php
+// Configuración de la base de datos
+$dsn = 'mysql:host=localhost;dbname=db_pi';
+$usuario = 'root';
+$contrasena = '';
 
-   require 'config/databaseServices.php';
-   $db = new Database();
-   $con = $db->conectar();
+try {
+    // Crear una nueva instancia de PDO
+    $conexion = new PDO($dsn, $usuario, $contrasena);
 
-   $sql = $con->prepare("SELECT idServices, Serv_name, Serv_description, Serv_price, Serv_img FROM services WHERE Serv_activo=1");
-   $sql->execute();
-   $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+    // Configurar PDO para que lance excepciones en caso de errores
+    $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    // Consulta SQL para obtener los servicios desde la base de datos
+    $consulta = "SELECT * FROM services";
+
+    // Preparar la consulta
+    $stmt = $conexion->prepare($consulta);
+
+    // Ejecutar la consulta
+    $stmt->execute();
+
+    // Obtener los resultados como un array asociativo
+    $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Iterar sobre los resultados y mostrar los servicios
+    
+} catch (PDOException $e) {
+    // Capturar y manejar errores de la base de datos
+    echo 'Error: ' . $e->getMessage();
+}
 ?>
 
 
@@ -71,11 +92,7 @@
             
                <div id="menu-btn" class="fas fa-bars"></div>
                </div>
-               <section class="Shome" id="Shome">
-                  <div class="Scontent">
-                     <h3>Servicios</h3>
-                  </div>
-               </section>
+
             </header>
             <!-- end header -->
 
@@ -104,18 +121,10 @@
                         </div>
                      </div>
                   </div>
-                  <?php foreach($resultado as $row) { ?>
-                  <div class="row special-list">
+   
+                  <!--<div class="row special-list">
                      <div class="col-lg-4 col-md-6 special-grid drinks">
                         <div class="gallery-single fix">
-                        <?php
-                           $id = $row['idServices'];
-                           $imagen = $row['Serv_img'];
-
-                           if(!file_exists($imagen)){
-                              $imagen = "images/no-photo.png";
-                           }
-                           ?>
                            <img src="<?php echo $imagen; ?>" class="img-fluid" alt="Image">
                            <div class="why-text">
                               <h4><?php echo $row['Serv_name'] ?></h4>
@@ -123,8 +132,28 @@
                               <h5><?php echo $row['Serv_price'] ?></h5>
                            </div>
                         </div>
-                     </div>
-                     
+                     </div>-->
+                    
+
+    <div class="row special-list">
+    <?php foreach ($resultados as $servicio) { ?>
+    <div class="col-lg-4 col-md-6 special-grid drinks">
+    <div class="gallery-single fix">
+   <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
+     <div class="why-text">;
+    <h4><?php echo $servicio['Serv_name']; ?></h4>
+    <p><?php echo $servicio['Serv_description']; ?></p>
+    <h5><?php echo $servicio['Serv_price']; ?></h5>
+    </div>
+    
+     </div>
+     </div>
+     <?php }
+?>
+    </div>
+
+
+
                      <!--<div class="col-lg-4 col-md-6 special-grid drinks">
                         <div class="gallery-single fix">
                            <img src="images/img-02.jpg" class="img-fluid" alt="Image">
@@ -214,7 +243,7 @@
                      </div>-->
                      
                   </div>
-                  <?php } ?>
+                 
                </div>
             </div>
            <!--end what we do-->  
