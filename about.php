@@ -1,4 +1,12 @@
 <?php
+   require 'config/databaseServices.php';
+   $db = new Database();
+   $conn = $db->conectar();
+   
+   $sql = $conn->prepare("SELECT * FROM aboutus");
+   $sql->execute();
+   $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -89,13 +97,16 @@
             <img src="images/about.jpg" alt="">
          </div>
 
+
+         <?php foreach($resultado as $row){ ?>
          <div class="content">
             <h3 class="title">Historia</h3>
-            <p>Desde nuestra fundación, hemos crecido para convertirnos en uno de los salones de belleza más respetados y reconocidos en Reynosa. Nuestra historia está marcada por un dedicado equipo de profesionales que comparten una visión común: realzar la belleza de cada cliente y brindar un servicio de calidad que trascienda las expectativas.</p>        
+            <p><?php echo $row['historia'] ?></p>        
             <h3 class="title">Nuestra Mision</h3>
-            <p>En Lizbeth Hair Salon, nuestra misión es realzar la belleza de cada persona que entra por nuestras puertas. Nos enorgullece nuestro compromiso con la satisfacción del cliente, la calidad, la innovación y la integridad.</p>
+            <p><?php echo $row['mision'] ?> </p>
             <h3 class="title">Nuestros Valores</h3>
-            <p>Nuestros valores fundamentales incluyen la excelencia, el profesionalismo, la diversidad, la responsabilidad social y el bienestar de nuestros clientes.</p>
+            <p><?php echo $row['valores'] ?> </p>
+            <?php } ?>
 
             <div class="icons-container">
                   <div class="icons">
