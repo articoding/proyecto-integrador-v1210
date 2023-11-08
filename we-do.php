@@ -1,14 +1,38 @@
 <?php
 
-   require 'config/databaseServices.php';
-   $db = new Database();
-   $con = $db->conectar();
+// Configuración de la base de datos
+$dsn = 'mysql:host=localhost;dbname=db_pi';
+$usuario = 'root';
+$contrasena = '';
 
-   $sql = $con->prepare("SELECT idServices, Serv_name, Serv_description, Serv_price, Serv_img FROM services WHERE Serv_activo=1");
-   $sql->execute();
-   $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+try {
+    // Crear una nueva instancia de PDO
+    $conexion = new PDO($dsn, $usuario, $contrasena);
 
+    // Configurar PDO para que lance excepciones en caso de errores
+    $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Consulta SQL para obtener los servicios desde la base de datos
+    $consulta = "SELECT * FROM services";
+
+    // Preparar la consulta
+    $stmt = $conexion->prepare($consulta);
+
+    // Ejecutar la consulta
+    $stmt->execute();
+
+    // Obtener los resultados como un array asociativo
+    $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Iterar sobre los resultados y mostrar los servicios
+    
+} catch (PDOException $e) {
+    // Capturar y manejar errores de la base de datos
+    echo 'Error: ' . $e->getMessage();
+}
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -91,7 +115,11 @@
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-lg-12">
+               
+               
+                  <div class="col-lg-12">
+
+
                         <div class="special-menu text-center">
                            <div class="button-group filter-button-group">
                               <button class="active" data-filter="*">Todas</button>
@@ -103,83 +131,27 @@
                         </div>
                      </div>
                   </div>
-                  <?php foreach($resultado as $row) { ?>
-                  <div class="row special-list">
-                     <div class="col-lg-4 col-md-6 special-grid drinks">
-                        <div class="gallery-single fix">
-                        <?php
-                           $id = $row['idServices'];
-                           $imagen = "images/Servicios/" . $id . "/principal.jpg";
 
-                           if(!file_exists($imagen)){
-                              $imagen = "images/no-photo.png";
-                           }
-                           ?>
-                           <img src="<?php echo $imagen; ?>" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4><?php echo $row['Serv_name'] ?></h4>
-                              <p><?php echo $row['Serv_description'] ?></p>
-                              <h5><?php echo $row['Serv_price'] ?></h5>
-                           </div>
-                        </div>
+                  
+                  <div class="row special-list">
+                     <?php foreach ($resultados as $servicio) { ?>
+                     <div class="col-lg-4 col-md-6 special-grid manos">
+                     <div class="gallery-single fix">
+                     <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
+                     <div class="why-text">;
+                     <h4><?php echo $servicio['Serv_name']; ?></h4>
+                     <p><?php echo $servicio['Serv_description']; ?></p>
+                     <h5><?php echo $servicio['Serv_price']; ?></h5>
                      </div>
                      
-                     <div class="col-lg-4 col-md-6 special-grid drinks">
-                        <div class="gallery-single fix">
-                           <img src="images/img-02.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Drinks 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $9.79</h5>
-                           </div>
-                        </div>
+                     </div>
+                     </div>
+                     <?php } ?>
                      </div>
                      
-                     <div class="col-lg-4 col-md-6 special-grid drinks">
-                        <div class="gallery-single fix">
-                           <img src="images/img-03.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Drinks 3</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $10.79</h5>
-                           </div>
-                        </div>
-                     </div>
+                    
                      
-                     <div class="col-lg-4 col-md-6 special-grid lunch">
-                        <div class="gallery-single fix">
-                           <img src="images/img-04.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Lunch 1</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $15.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid lunch">
-                        <div class="gallery-single fix">
-                           <img src="images/img-05.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Lunch 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $18.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid lunch">
-                        <div class="gallery-single fix">
-                           <img src="images/img-06.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Lunch 3</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $20.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid dinner">
+                     <div class="col-lg-4 col-md-6 special-grid manos">
                         <div class="gallery-single fix">
                            <img src="images/img-07.jpg" class="img-fluid" alt="Image">
                            <div class="why-text">
@@ -189,8 +161,19 @@
                            </div>
                         </div>
                      </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid dinner">
+
+                     <div class="col-lg-4 col-md-6 special-grid cuerpo">
+                        <div class="gallery-single fix">
+                           <img src="images/img-07.jpg" class="img-fluid" alt="Image">
+                           <div class="why-text">
+                              <h4>Special Dinner 1</h4>
+                              <p>Sed id magna vitae eros sagittis euismod.</p>
+                              <h5> $25.79</h5>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-4 col-md-6 special-grid piel">
                         <div class="gallery-single fix">
                            <img src="images/img-08.jpg" class="img-fluid" alt="Image">
                            <div class="why-text">
@@ -200,21 +183,19 @@
                            </div>
                         </div>
                      </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid dinner">
+
+                     <div class="col-lg-4 col-md-6 special-grid cabello">
                         <div class="gallery-single fix">
-                           <img src="images/img-09.jpg" class="img-fluid" alt="Image">
+                           <img src="images/img-08.jpg" class="img-fluid" alt="Image">
                            <div class="why-text">
-                              <h4>Special Dinner 3</h4>
+                              <h4>Special Dinner 2</h4>
                               <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $24.79</h5>
+                              <h5> $22.79</h5>
                            </div>
                         </div>
                      </div>
-                     
                   </div>
-                  <?php } ?>
-               </div>
+                  </div>
             </div>
            <!--end what we do-->  
 
@@ -272,6 +253,32 @@
             <!-- sidebar -->
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
             <script src="js/custom.js"></script>
+            <script src="js/isotope.min.js"></script>
+            <script src="js/baguetteBox.min.js"></script>
+            <script src="js/images-loded.min.js"></script>
+            <script src="js/jquery.superslides.min.js"></script>
+
+            <script>
+               $(document).ready(function(){
+                  $('.button-group').on('click', 'button', function() {
+                     var filterValue = $(this).attr('data-filter');
+
+                     // Mostrar los elementos correspondientes y ocultar el resto
+                     $('.special-list .special-grid').hide();
+                     if (filterValue === '*') {
+                           $('.special-list .special-grid').show();
+                     } else {
+                           $('.special-list').find(filterValue).show();
+                     }
+
+                     // Agregar/Quitar clase 'active' en los botones
+                     $('.button-group button').removeClass('active');
+                     $(this).addClass('active');
+                  });
+               });
+            </script>
+
+
          </body>
 </html>
 
