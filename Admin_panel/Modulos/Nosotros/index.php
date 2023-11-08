@@ -19,9 +19,7 @@ if(isset($_GET['idAbout'])){
 
 <?php include("../../Templates/header3.php"); ?>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
-  Nuevo
-</button>
+
 
 <div class="table-responsive">
     <table class="table table-white">
@@ -43,7 +41,6 @@ if(isset($_GET['idAbout'])){
                 <td scope="row"><?php echo $about['valores']; ?></td>
                 <td>
                 <a href="edit.php?idAbout=<?php echo $about['idAbout']; ?>" class="btn btn-success">Editar</a> <br>
-                <a href="index.php?idAbout=<?php echo $about['idAbout']; ?>" class="btn btn-danger">Eliminar</a> <br>
                 </td>
             </tr>
         <?php } ?>   
