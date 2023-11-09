@@ -56,5 +56,5 @@ include("../../conexion.php");
 
     </form>
 
-<?php include("../../Templates/footer2.php"); ?>
+<?php include("../../Templates/footer.php"); ?>
 
