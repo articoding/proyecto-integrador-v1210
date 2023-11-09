@@ -79,6 +79,8 @@
                         <a class="collapse-item active" href="index.php">Servicios</a>
                         <a class="collapse-item" href="../Contacto/index.php">Contacto</a>
                         <a class="collapse-item" href="../Nosotros/index.php">Nosotros</a>
+                        <a class="collapse-item" href="../Usuarios/index.php">Usuarios</a>
+
                     </div>
                 </div>
             </li>

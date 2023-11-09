@@ -68,6 +68,7 @@
                         <a class="collapse-item" href="Modulos/Servicios/index.php">Servicios</a>
                         <a class="collapse-item" href="Modulos/Contacto/index.php">Contacto</a>
                         <a class="collapse-item" href="Modulos/Nosotros/index.php">Nosotros</a>
+                        <a class="collapse-item" href="Modulos/Usuarios/index.php">Usuarios</a>
                     </div>
                 </div>
             </li>
