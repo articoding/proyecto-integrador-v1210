@@ -624,14 +624,109 @@ ul.social_icon li a:hover {
  
 /* services */
 
+.about2 {
+     background-color: #fff;
+     padding-top: 70px;
+     position: relative;
+     padding-bottom: 70px;
+}
+
+
+
+.about2 .titlepage {
+     text-align: left;
+     padding-bottom: 0;
+}
+
+.about2 .titlepage h2 {
+     margin-bottom: 30px;
+}
+
+.about2 .titlepage p {
+     font-weight: 400;
+     font-size: 17px;
+     line-height: 28px;
+     padding-bottom: 40px;
+}
+
+.about_img {
+     overflow: hidden;
+}
+
+.about_img figure {
+     margin: 0;
+}
+
+.about_img figure img {
+     width: 100%;
+     transition: all .5s;
+}
+
+.about_img figure img:hover {
+     transform: scale(1.2);
+}
+
+.about2 .row{
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+}
+ 
+.about2 .row .image{
+      flex:1 1 39rem; 
+}
+
+.about2 .row .content{
+     flex:1 1 51rem;
+     padding:5rem;
+}
+
+.about2 .row .content h3{
+font-size: 3rem;
+color:var(--black);
+}
+
+.about2 .row .content p{
+font-size: 1.6rem;
+color:#444;
+padding:1rem 0;
+line-height: 1.8;
+}
+
+.about2 .content .icons-container{
+display: flex;
+flex-wrap: wrap;
+gap:2rem;
+margin-top: 3rem;
+}
+
+.about2 .content .icons-container .icons{
+flex:1 1 16rem;
+text-align: center;
+padding:3rem 2rem;
+}
+
+.about2 .content .icons-container .icons img{
+height: 5rem;
+}
+
+.about2 .content .icons-container .icons h3{
+padding-top: 1rem;
+font-size: 1.6rem;
+color:#444;
+font-weight: normal;
+text-transform: capitalize;
+}
+
 /** end team section **/
+
+
 
 .about {
      background-color: #fff;
-     padding-top: 90px;
+     padding-top: 190px;
      position: relative;
-     padding-bottom: 170px;
-     
+     padding-bottom: 190px;
 }
 
 .slin2::before {
@@ -686,7 +781,7 @@ ul.social_icon li a:hover {
 }
  
 .about .row .image{
-     flex:1 1 39rem;
+      flex:1 1 39rem; 
 }
 
 .about .row .content{
@@ -854,7 +949,7 @@ text-transform: capitalize;
 .main_form .send_btn {
      font-size: 20px;
      transition: ease-in all 0.5s;
-     background-color: #4ed8eb;
+     background-color: var(--primary-color);
      text-transform: uppercase;
      color: #fff;
      padding: 10px 0px;
@@ -868,7 +963,7 @@ text-transform: capitalize;
 }
 
 .main_form .send_btn:hover {
-     background-color: #fa8c17;
+     background-color: #4ed8eb;
      transition: ease-in all 0.5s;
      color: #fff;
 }
@@ -1003,12 +1098,14 @@ text-transform: capitalize;
          font-size: 1.7rem;
      }
    
-      section{
+     section{
          padding:3rem 2rem;
       }
  
 }
  
+
+
 @media (max-width:768px){
  
      #menu-btn{
@@ -1339,3 +1436,23 @@ text-transform: capitalize;
      color: rgba(255, 255, 255, 0.7);
 }   
 
+/* CSS for the "ok" and "bad" classes */
+h3.ok, h3.bad {
+     color: white; /* Text color */
+     font-weight: bold; /* Bold text */
+     text-align: center; /* Center the text */
+     padding: 15px; /* Padding around the text */
+     margin: 15px; /* Margin outside the box */
+
+}
+ 
+/* CSS for the "ok" class */
+h3.ok {
+     background-color: var(--primary-color); /* Background color for successful messages */
+}
+ 
+/* CSS for the "bad" class */
+h3.bad {
+     background-color: lightcoral; /* Background color for error messages */
+}
+ 

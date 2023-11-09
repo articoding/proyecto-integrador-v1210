@@ -88,7 +88,7 @@
             </div>
          </div>
       </div>
-   <section class="about" id="about">
+   <section class="about2" id="about2">
 
 
       <div class="row" >
