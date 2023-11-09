@@ -123,10 +123,12 @@ try {
                         <div class="special-menu text-center">
                            <div class="button-group filter-button-group">
                               <button class="active" data-filter="*">Todas</button>
-                              <button data-filter=".piel">Piel</button>
-                              <button data-filter=".manos">Manos</button>
-                              <button data-filter=".cabello">Cabello</button>
-                              <button data-filter=".cuerpo">Cuerpo</button>
+                              <button data-filter=".Piel">Piel</button>
+                              <button data-filter=".Manos">Manos</button>
+                              <button data-filter=".Cabello">Cabello</button>
+                              <button data-filter=".Cuerpo">Cuerpo</button>
+                              <button data-filter=".Tratamientos">Tratamientos capilares</button>
+
                            </div>
                         </div>
                      </div>
@@ -135,7 +137,7 @@ try {
                   
                   <div class="row special-list">
                      <?php foreach ($resultados as $servicio) { ?>
-                     <div class="col-lg-4 col-md-6 special-grid manos">
+                     <div class="col-lg-4 col-md-6 special-grid Manos">
                      <div class="gallery-single fix">
                      <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
                      <div class="why-text">;
@@ -151,7 +153,7 @@ try {
                      
                     
                      
-                     <div class="col-lg-4 col-md-6 special-grid manos">
+                     <!-- <div class="col-lg-4 col-md-6 special-grid manos">
                         <div class="gallery-single fix">
                            <img src="images/img-07.jpg" class="img-fluid" alt="Image">
                            <div class="why-text">
@@ -193,7 +195,7 @@ try {
                               <h5> $22.79</h5>
                            </div>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                   </div>
             </div>
@@ -249,6 +251,8 @@ try {
             <script src="js/jquery-3.0.0.min.js"></script>
             <script src="js/script.js"></script>
             <script src="js/custom1.js"></script>
+            <script src="js/buttons.js"></script>
+
 
             <!-- sidebar -->
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -257,26 +261,6 @@ try {
             <script src="js/baguetteBox.min.js"></script>
             <script src="js/images-loded.min.js"></script>
             <script src="js/jquery.superslides.min.js"></script>
-
-            <script>
-               $(document).ready(function(){
-                  $('.button-group').on('click', 'button', function() {
-                     var filterValue = $(this).attr('data-filter');
-
-                     // Mostrar los elementos correspondientes y ocultar el resto
-                     $('.special-list .special-grid').hide();
-                     if (filterValue === '*') {
-                           $('.special-list .special-grid').show();
-                     } else {
-                           $('.special-list').find(filterValue).show();
-                     }
-
-                     // Agregar/Quitar clase 'active' en los botones
-                     $('.button-group button').removeClass('active');
-                     $(this).addClass('active');
-                  });
-               });
-            </script>
 
 
          </body>
