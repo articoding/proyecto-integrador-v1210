@@ -7,15 +7,6 @@ $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:
 $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
 $Serv_img=(isset($_FILES['Serv_img']['name'])?$_FILES['Serv_img']['name']:"");
 
-$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
-
-$stm->bindParam(":Serv_name",$Serv_name);
-$stm->bindParam(":Serv_description",$Serv_description);
-$stm->bindParam(":Serv_price",$Serv_price);
-$stm->bindParam(":Serv_img",$Serv_img);
-$stm->execute();
-
-
 $fecha = new DateTime();
 $nombreArchivo=($Serv_img!="")?$fecha->getTimestamp()."_".$_FILES["Serv_img"]["name"]:"imagen.png";
 
@@ -25,7 +16,11 @@ if($tmpimagen!=""){
   move_uploaded_file($tmpimagen,"../../../images/Servicios/".$nombreArchivo);
 
 }
+$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
 
+$stm->bindParam(":Serv_name",$Serv_name);
+$stm->bindParam(":Serv_description",$Serv_description);
+$stm->bindParam(":Serv_price",$Serv_price);
 $stm->bindParam(':Serv_img',$nombreArchivo);
 $stm->execute();
 
@@ -61,7 +56,7 @@ $stm->execute();
         <br>
 
         <label for="Serv_img">Imagen</label>
-        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" name="Serv_img" placeholder="Cargar Imagen">
+        <input type="file" accept="image/*" class="form-control" name="Serv_img" placeholder="Cargar Imagen">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
