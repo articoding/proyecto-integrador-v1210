@@ -112,7 +112,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog1.jpg" alt="#"/></figure>
+                              <figure><img src="images/blog1.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -122,7 +122,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog2.jpg" alt="#"/></figure>
+                              <figure><img src="images/blog2.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -132,7 +132,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog3.jpg" alt="#"/></figure>
+                              <figure><img src="images/blog3.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -143,7 +143,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog4.jpg" alt="#"/></figure>
+                              <figure><img src="images/blog4.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -155,7 +155,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog5.jpg" alt="#"/></figure>
+                              <figure><img src="images/blog5.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -166,16 +166,22 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog6.jpg" alt="#"/></figure>
+                              <figure><img src="images/blog6.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
                            </div>
                         </div>
                      </div>
-
-                     
                      </div>
+                  </div>
+                  <div id="enlarged_image_modal" class="modal" onclick="closeEnlarged()">
+                     <span class="close" onclick="closeEnlarged()">&times;</span>
+                     <img class="modal-content" id="enlarged_image">
+                     <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+                     <a class="next" onclick="changeImage(1)">&#10095;</a>
+                     <span class="exit-button" onclick="closeEnlarged()">X</span>
+
                   </div>
                </div>
             </div>
@@ -249,6 +255,35 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+      <script>
+         // Function to display the clicked image in an enlarged view
+
+         let currentImageIndex = 0;
+         const images = document.querySelectorAll('.experts_img img');
+         const modalImg = document.getElementById('enlarged_image');
+         const modal = document.getElementById('enlarged_image_modal');
+
+         function showEnlarged(element) {
+            currentImageIndex = Array.from(images).indexOf(element);
+            modal.style.display = 'block';
+            modalImg.src = element.src;
+         }
+
+         function closeEnlarged() {
+            modal.style.display = 'none';
+         }
+
+         function changeImage(n) {
+            currentImageIndex += n;
+            if (currentImageIndex >= images.length) {
+               currentImageIndex = 0;
+            }
+            if (currentImageIndex < 0) {
+               currentImageIndex = images.length - 1;
+            }
+            modalImg.src = images[currentImageIndex].src;
+         }
+      </script>
    </body>
 </html>
 

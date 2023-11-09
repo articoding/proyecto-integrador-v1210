@@ -102,7 +102,7 @@
          <div class="content">
             <h3 class="title">Historia</h3>
             <p><?php echo $row['historia'] ?></p>        
-            <h3 class="title">Nuestra Mision</h3>
+            <h3 class="title">Nuestra Misión</h3>
             <p><?php echo $row['mision'] ?> </p>
             <h3 class="title">Nuestros Valores</h3>
             <p><?php echo $row['valores'] ?> </p>
