@@ -51,4 +51,4 @@ if(isset($_GET['idAbout'])){
 <?php include("create.php"); ?>
 
 
-<?php include("../../Templates/footer3.php"); ?>
+<?php include("../../Templates/footer.php"); ?>
