@@ -109,8 +109,8 @@ try {
                   <div class="row">
                      <div class="col-lg-12">
                         <div class="heading-title text-center">
-                           <h2>Nuestros servicios</h2>
-                           <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
+                           <h2>¡Descubre la excelencia en belleza!</h2>
+                           <p>En Lizbeth Hair Salon te ofrecemos una amplia variedad de servicios </p>
                         </div>
                      </div>
                   </div>
