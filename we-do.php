@@ -123,11 +123,14 @@ try {
                         <div class="special-menu text-center">
                            <div class="button-group filter-button-group">
                               <button class="active" data-filter="*">Todas</button>
-                              <button data-filter=".Piel">Piel</button>
-                              <button data-filter=".Manos">Manos</button>
                               <button data-filter=".Cabello">Cabello</button>
-                              <button data-filter=".Cuerpo">Cuerpo</button>
                               <button data-filter=".Tratamientos">Tratamientos capilares</button>
+                              <button data-filter=".Manos">Manos</button>
+                              <button data-filter=".Pies">Pies</button>
+                              <button data-filter=".Pestanas">Pestañas</button>
+                              <button data-filter=".Maquillaje">Maquillaje</button>
+                              <button data-filter=".Rostro">Rostro</button>
+                              <button data-filter=".Cuerpo">Cuerpo</button>
 
                            </div>
                         </div>
