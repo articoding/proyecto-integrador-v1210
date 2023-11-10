@@ -49,17 +49,22 @@
 
             <input type="hidden" class="form-control" name="txtidUsuario" value="<?php echo $txtidUsuario; ?>" placeholder="Ingresa">
             <label for="">Nombre</label>
-            <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>" placeholder="Ingresa tu nombre" >
+            <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>" placeholder="Actualiza tu nombre" >
             <label for="">Apellidos</label>
-            <input type="text" class="form-control" name="apellidos" value="<?php echo $apellidos; ?>" placeholder="Ingresa tus apellidos" >
+            <input type="text" class="form-control" name="apellidos" value="<?php echo $apellidos; ?>" placeholder="Actualiza tus apellidos" >
             <label for="">Fecha de nacimiento</label>
-            <input type="text" class="form-control" name="fechanacimiento" value="<?php echo $fechanacimiento; ?>" placeholder="Ingresa tu fecha de nacimiento" >
+            <input type="text" class="form-control" name="fechanacimiento" value="<?php echo $fechanacimiento; ?>" placeholder="Actualiza tu fecha de nacimiento" >
             <label for="">Correo</label>
-            <input type="text" class="form-control" name="correo" value="<?php echo $correo; ?>" placeholder="Ingresa tu correo" >
+            <input type="text" class="form-control" name="correo" value="<?php echo $correo; ?>" placeholder="Actualiza tu correo" >
             <label for="">Contraseña</label>
-            <input type="text" class="form-control" name="contrasena" value="<?php echo $contrasena; ?>" placeholder="Ingresa tu contraseña" >
+            <input type="text" class="form-control" name="contrasena" value="<?php echo $contrasena; ?>" placeholder="Actualiza tu contraseña" >
             <label for="">Tipo de usuario</label>
-            <input type="text" class="form-control" name="tipousuario" value="<?php echo $tipousuario; ?>" placeholder="Ingresa tu tipo de usuario" >
+            <select type="text" class="form-control" name="tipousuario" value="<?php echo $tipousuario; ?>" placeholder="Actualiza tu tipo de usuario" >
+                <option value="" disabled selected>Cambia el tipo de usuario</option>
+                <option value="admin">Administrador</option>
+                <option value="user">Usuario</option>
+            </select>
+
             <div class="modal-footer">
                 <a href="index.php" class="btn btn-danger">Cancelar</a>     
                 <button type="submit" class="btn btn-primary">Actualizar</button>

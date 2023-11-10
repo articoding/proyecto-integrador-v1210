@@ -47,7 +47,12 @@ if ($_POST) {
         <label for="">Contraseña</label>
         <input type="text" class="form-control" name="contrasena" value="" placeholder="Ingresa tu contraseña" >
         <label for="">Tipo de usuario</label>
-        <input type="text" class="form-control" name="tipousuario" value="" placeholder="Ingresa tu tipo de usuario" >
+        <select type="text" class="form-control" name="tipousuario" value="" placeholder="Ingresa el tipo de usuario deseado" >
+            <option value="" disabled selected>Seleccione el tipo de usuario</option>
+            <option value="admin">Administrador</option>
+            <option value="user">Usuario</option>
+        </select>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
