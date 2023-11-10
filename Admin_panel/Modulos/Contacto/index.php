@@ -19,9 +19,7 @@ if(isset($_GET['idContact'])){
 
 <?php include("../../Templates/header2.php"); ?>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
-  Nuevo
-</button>
+
 
 <div class="table-responsive">
     <table class="table table-white">
@@ -29,13 +27,10 @@ if(isset($_GET['idContact'])){
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Sociales</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Email</th>
+                <th scope="col">Comentarios</th>
                 <th scope="col">Fecha de registro</th>
-
-
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -44,10 +39,9 @@ if(isset($_GET['idContact'])){
             <tr class="">
                 <td scope="row"><?php echo $contact['idContact']; ?></td>
                 <td scope="row"><?php echo $contact['contact_name']; ?></td>
-                <td><?php echo $contact['contact_ubication']; ?></td>
-                <td><?php echo $contact['contact_social']; ?></td>
                 <td><?php echo $contact['contact_phone']; ?></td>
                 <td><?php echo $contact['contact_email']; ?></td>
+                <td><?php echo $contact['contact_comment']; ?></td>
                 <td><?php echo $contact['contact_register']; ?></td>
                 <td>
                 <a href="edit.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-success">Editar</a> <br>

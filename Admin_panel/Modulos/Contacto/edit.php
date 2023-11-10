@@ -9,29 +9,26 @@
         $stm->execute();
         $registro = $stm->fetch(PDO::FETCH_LAZY);
         $nombre = $registro['contact_name'];
-        $direccion = $registro['contact_ubication'];
-        $sociales = $registro['contact_social'];
         $telefono = $registro['contact_phone'];
         $email = $registro['contact_email'];
+        $comment = $registro['contact_comment'];
         $fecharegistro = $registro['contact_register'];
     }
 
     if($_POST){
         $txtidContact = (isset($_POST['txtidContact'])?$_POST['txtidContact']:"");
         $nombre = (isset($_POST['nombre'])?$_POST['nombre']:"");
-        $direccion = (isset($_POST['direccion'])?$_POST['direccion']:"");
-        $sociales = (isset($_POST['sociales'])?$_POST['sociales']:"");
         $telefono = (isset($_POST['telefono'])?$_POST['telefono']:"");
         $email = (isset($_POST['email'])?$_POST['email']:"");
+        $comment = (isset($_POST["comment"])?$_POST["comment"]:"");
         $fecharegistro = (isset($_POST['fecharegistro'])?$_POST['fecharegistro']:"");
 
-        $stm = $conexion->prepare("UPDATE contact_us SET contact_name = :nombre, contact_ubication = :direccion, contact_social = :sociales, contact_phone = :telefono, contact_email = :email, contact_register = :fecharegistro WHERE idContact = :txtidContact");
+        $stm = $conexion->prepare("UPDATE contact_us SET contact_name = :nombre, contact_phone = :telefono, contact_email = :email, contact_comment = :comment, contact_register = :fecharegistro WHERE idContact = :txtidContact");
         $stm->bindParam(":txtidContact",$txtidContact);
         $stm->bindParam(":nombre",$nombre);
-        $stm->bindParam(":direccion",$direccion);
-        $stm->bindParam(":sociales",$sociales);
         $stm->bindParam(":telefono",$telefono);
         $stm->bindParam(":email",$email);
+        $stm->bindParam(":comment",$comment);
         $stm->bindParam(":fecharegistro",$fecharegistro);
         $stm->execute();
         header("location: index.php");
@@ -49,14 +46,12 @@
             <input type="hidden" class="form-control" name="txtidContact" value="<?php echo $txtidContact; ?>" placeholder="Ingresa">
             <label for="">Nombre</label>
             <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>" placeholder="Ingresa tu nombre" >
-            <label for="">Dirección</label>
-            <input type="text" class="form-control" name="direccion" value="<?php echo $direccion; ?>" placeholder="Ingresa tu dirección" >
-            <label for="">Sociales</label>
-            <input type="text" class="form-control" name="sociales" value="<?php echo $sociales; ?>" placeholder="Ingresa tu redes sociales" >
             <label for="">Teléfono</label>
             <input type="text" class="form-control" name="telefono" value="<?php echo $telefono; ?>" placeholder="Ingresa tu teléfono" >
             <label for="">Email</label>
             <input type="text" class="form-control" name="email" value="<?php echo $email; ?>" placeholder="Ingresa tu email">
+            <label for="">Comentario</label>
+            <input type="text" class="form-control" name="comment" value="<?php echo $comment; ?>" placeholder="Cambia el Comentario">
             <label for="">Fecha de registro</label>
             <input type="text" class="form-control" name="fecharegistro" value="<?php echo $fecharegistro; ?>" placeholder="Ingresa tu fecha de registro" >
         </div>

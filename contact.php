@@ -89,16 +89,13 @@
                            <input class="contactus" placeholder="Nombre Completo" type="type" name="name" required id="name"> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Dirección" type="type" name="address" required id="address"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Redes Sociales " type="type" name="social" required id="social"> 
-                        </div>
-                        <div class="col-md-12">
                            <input class="contactus" placeholder="Número de Celular" type="type" name="cellphone" required id="cellphone">                          
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email " type="type" name="email" required id="email"> 
+                           <input class="contactus" placeholder="Email " type="type" name="email" required id="email">
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Comentarios" type="type" name="comment" required id="message"></textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn" input type="submit" name="register">Enviar</button>
