@@ -25,7 +25,6 @@ if(isset($_GET['idAbout'])){
     <table class="table table-white">
         <thead class="table table-white">
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Historia</th>
                 <th scope="col">Misión</th>
                 <th scope="col">Valores</th>
@@ -35,7 +34,6 @@ if(isset($_GET['idAbout'])){
         <tbody>
             <?php foreach($aboutus as $about) { ?>
             <tr class="">
-                <td scope="row"><?php echo $about['idAbout']; ?></td>
                 <td scope="row"><?php echo $about['historia']; ?></td>
                 <td scope="row"><?php echo $about['mision']; ?></td>
                 <td scope="row"><?php echo $about['valores']; ?></td>
