@@ -53,7 +53,7 @@
             <label for="">Apellidos</label>
             <input type="text" class="form-control" name="apellidos" value="<?php echo $apellidos; ?>" placeholder="Actualiza tus apellidos" >
             <label for="">Fecha de nacimiento</label>
-            <input type="text" class="form-control" name="fechanacimiento" value="<?php echo $fechanacimiento; ?>" placeholder="Actualiza tu fecha de nacimiento" >
+            <input type="date" class="form-control" name="fechanacimiento" value="<?php echo $fechanacimiento; ?>" placeholder="Actualiza tu fecha de nacimiento" >
             <label for="">Correo</label>
             <input type="text" class="form-control" name="correo" value="<?php echo $correo; ?>" placeholder="Actualiza tu correo" >
             <label for="">Contraseña</label>
@@ -61,8 +61,8 @@
             <label for="">Tipo de usuario</label>
             <select type="text" class="form-control" name="tipousuario" value="<?php echo $tipousuario; ?>" placeholder="Actualiza tu tipo de usuario" >
                 <option value="" disabled selected>Cambia el tipo de usuario</option>
-                <option value="admin">Administrador</option>
-                <option value="user">Usuario</option>
+                <option value="admin<?php if ($tipousuario == 'admin') echo 'selected';   ?> ">Administrador</option>
+                <option value="user <?php if ($tipousuario == 'user') echo 'selected';   ?>">Usuario</option>
             </select>
 
             <div class="modal-footer">

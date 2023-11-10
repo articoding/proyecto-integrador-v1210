@@ -1180,13 +1180,14 @@ text-transform: capitalize;
 }
 
 .Shome h3 {
- position: relative;
- font-size: 100px;
- color: white;
- left: 105%;
-/* font-family: 'BebasNeue';
- font-weight: normal;*/
-}
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     font-size: 100px;
+     color: white;
+     text-align: center;
+   }
+   
 
 .We_doxMn {
  position: relative;
@@ -1281,6 +1282,9 @@ text-transform: capitalize;
     padding: 12px 40px;
     border: none;
     border-radius: 4px;
+    transition: background-color 0.5s ease-in-out;
+
+
 }
 
 .filter-button-group button.active {

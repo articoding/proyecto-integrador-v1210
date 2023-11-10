@@ -95,11 +95,7 @@ try {
             
                <div id="menu-btn" class="fas fa-bars"></div>
                </div>
-               <section class="Shome" id="Shome">
-                  <div class="Scontent">
-                     <h3>Servicios</h3>
-                  </div>
-               </section>
+               
             </header>
             <!-- end header -->
 
@@ -142,7 +138,7 @@ try {
                      <?php foreach ($resultados as $servicio) { ?>
                      <div class="col-lg-4 col-md-6 special-grid <?php echo $servicio['categories']; ?>">
                      <div class="gallery-single fix">
-                     <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
+                     <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid image-click" data-details="" alt="image">
                      <div class="why-text">;
                      <h4><?php echo $servicio['Serv_name']; ?></h4>
                      <p><?php echo $servicio['Serv_description']; ?></p>

@@ -41,7 +41,7 @@ if ($_POST) {
         <label for="">Apellidos</label>
         <input type="text" class="form-control" name="apellidos" value="" placeholder="Ingresa tus apellidos" >
         <label for="">Fecha de nacimiento</label>
-        <input type="text" class="form-control" name="fechanacimiento" value="" placeholder="Ingresa tu fecha de nacimiento" >
+        <input type="date" class="form-control" name="fechanacimiento" value="" placeholder="Ingresa tu fecha de nacimiento" >
         <label for="">Correo</label>
         <input type="text" class="form-control" name="correo" value="" placeholder="Ingresa tu correo" >
         <label for="">Contraseña</label>

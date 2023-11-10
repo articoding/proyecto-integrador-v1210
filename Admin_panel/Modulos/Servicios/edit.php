@@ -80,7 +80,7 @@ if ($_POST) {
         <input type="text" class="form-control" name="Serv_name" placeholder="Ingresar datos" value="<?php echo $Serv_name; ?>">
         <br>
 
-        <label for="Serv_description">Descripcion</label>
+        <label for="Serv_description">Descripción</label>
         <input type="text" class="form-control" name="Serv_description" placeholder="Ingresar datos" value="<?php echo $Serv_description; ?>">
         <br>
 
