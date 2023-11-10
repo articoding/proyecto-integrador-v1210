@@ -81,7 +81,7 @@ try {
             <header>
                <div class="header">
                <div class="logo">
-                  <a href="index.html"> <img src="images/logo.png" alt=""> </a>
+                  <a href="index.php"> <img src="images/logo.png" alt=""> </a>
                </div>
                <nav class="navbar">
                   <div id="close-navbar" class="fas fa-times"></div>
