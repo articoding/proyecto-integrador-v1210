@@ -140,7 +140,7 @@ try {
                   
                   <div class="row special-list">
                      <?php foreach ($resultados as $servicio) { ?>
-                     <div class="col-lg-4 col-md-6 special-grid Manos">
+                     <div class="col-lg-4 col-md-6 special-grid <?php echo $servicio['categories']; ?>">
                      <div class="gallery-single fix">
                      <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
                      <div class="why-text">;
@@ -156,49 +156,7 @@ try {
                      
                     
                      
-                     <!-- <div class="col-lg-4 col-md-6 special-grid manos">
-                        <div class="gallery-single fix">
-                           <img src="images/img-07.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 1</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $25.79</h5>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-lg-4 col-md-6 special-grid cuerpo">
-                        <div class="gallery-single fix">
-                           <img src="images/img-07.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 1</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $25.79</h5>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-lg-4 col-md-6 special-grid piel">
-                        <div class="gallery-single fix">
-                           <img src="images/img-08.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $22.79</h5>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-lg-4 col-md-6 special-grid cabello">
-                        <div class="gallery-single fix">
-                           <img src="images/img-08.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $22.79</h5>
-                           </div>
-                        </div>
-                     </div> -->
+                    
                   </div>
                   </div>
             </div>
