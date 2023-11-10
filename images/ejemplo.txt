@@ -1,27 +1,41 @@
-<?php
-@include 'config/databaseServices.php';
+<?php   
 
-$select = mysqli_query($conn, "SELECT * FROM services");
+include("../../conexion.php");
+
+if (isset($_GET['idServices'])){
+
+  $txtidServices=(isset($_GET['idServices'])?$_GET['idServices']:"");
+  $stm=$conexion->prepare("SELECT * FROM services WHERE idServices=:txtidServices");
+  $stm->bindParam(":txtidServices",$txtidServices);
+  $stm->execute();
+  $registro=$stm->fetch(PDO::FETCH_LAZY);
+  $Serv_name=$registro['Serv_name'];
+  $Serv_description=$registro['Serv_description'];
+  $Serv_price=$registro['Serv_price'];
+  $Serv_img=$registro['Serv_img'];
+  }
+  
+  if ($_POST) {
+    $txtidServices=(isset($_POST['txtidServices'])?$_POST['txtidServices']:"");
+    $Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
+    $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
+    $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
+    $Serv_img=(isset($_POST['Serv_img'])?$_POST['Serv_img']:"");
+    
+    $stm=$conexion->prepare("UPDATE services SET Serv_name=:Serv_name,Serv_description=:Serv_description,Serv_price=:Serv_price,Serv_img=:Serv_img WHERE idServices=:txtidServices");
+    $stm->bindParam(":Serv_name",$Serv_name);
+    $stm->bindParam(":Serv_description",$Serv_description);
+    $stm->bindParam(":Serv_price",$Serv_price);
+    $stm->bindParam(":Serv_img",$Serv_img);
+    $stm->bindParam(":txtidServices",$txtidServices);
+    
+    $stm->execute();
+    header("location: index.php");
+    }
+  
+  
+
 ?>
-<div class="container-fluid">
-    <div class="row">
-
-      <?php while($row = mysqli_fetch_assoc($select)){ ?>
-         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-            <div class="glasses_box" style="padding: 0px 0px 30px 0px;">
-               <figure><img src="images/Servicio<?php echo $row['Serv_img']; ?>" alt=""></figure>
-               <br>
-               <strong style="font-size: 1.2rem; color: black;"><?php echo $row['name']; ?></strong>
-            </div>
-         </div>
-      <?php } ?>
-   </div>
-</div>
-
- <?php foreach($resultado as $row) { ?>
-
-
-<img src="<?php echo $imagen; ?>" class="img-fluid" alt="Image">
 
  <?php } ?>
 
@@ -101,15 +115,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-  $fecha = new DateTime();
-        $nombreArchivo=($Serv_img!="")?$fecha->getTimestamp()."_".$_FILES["Serv_img"]["name"]:"imagen.png";
-    
-        $tmpimagen=$_FILES["Serv_img"]["tmp_name"];
-        if($tmpimagen!=""){
-    
-          move_uploaded_file($tmpimagen,"../../../images/Servicios/".$nombreArchivo);
-    
-        }
-    
-        $stmt->bindParam(';Serv_img',$nombreArchivo);
-        $stmt->execute();
+  <?php
+
+if ($_POST) {
+
+$Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
+$Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
+$Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
+$Serv_img=(isset($_FILES['Serv_img']['name'])?$_FILES['Serv_img']['name']:"");
+
+$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
+
+$stm->bindParam(":Serv_name",$Serv_name);
+$stm->bindParam(":Serv_description",$Serv_description);
+$stm->bindParam(":Serv_price",$Serv_price);
+$stm->bindParam(":Serv_img",$Serv_img);
+$stm->execute();
+
+
+$fecha = new DateTime();
+$nombreArchivo=($Serv_img!="")?$fecha->getTimestamp()."_".$_FILES["Serv_img"]["name"]:"imagen.png";
+
+$tmpimagen=$_FILES["Serv_img"]["tmp_name"];
+if($tmpimagen!=""){
+
+  move_uploaded_file($tmpimagen,"../../../images/Servicios/".$nombreArchivo);
+
+}
+
+$stm->bindParam(':Serv_img',$nombreArchivo);
+$stm->execute();
+
+}
+
