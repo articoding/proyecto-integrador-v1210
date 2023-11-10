@@ -21,6 +21,8 @@ if($_POST){
     $stm->bindParam(':fecharegistro', $fecharegistro);
     $stm->execute();
 
+    
+
 }
 
 ?>

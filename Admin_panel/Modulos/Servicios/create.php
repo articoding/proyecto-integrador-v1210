@@ -3,20 +3,37 @@
 if ($_POST) {
 
 $Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
+$categories=(isset($_POST['categories'])?$_POST['categories']:"");
 $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
 $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
-$Serv_img=(isset($_POST['Serv_img'])?$_POST['Serv_img']:"");
+$Serv_img=(isset($_FILES['Serv_img']['name'])?$_FILES['Serv_img']['name']:"");
 
+<<<<<<< HEAD
 $stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
+=======
+$fecha = new DateTime();
+$nombreArchivo=($Serv_img!="")?$fecha->getTimestamp()."_".$_FILES["Serv_img"]["name"]:"imagen.png";
+
+$tmpimagen=$_FILES["Serv_img"]["tmp_name"];
+if($tmpimagen!=""){
+
+  move_uploaded_file($tmpimagen,"../../../images/Servicios/".$nombreArchivo);
+
+}
+$stm=$conexion->prepare("INSERT INTO services(idServices,categories,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:categories,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
+>>>>>>> d613bcb9680d3b8ae61c852a50fdddcb5b55a199
 
 $stm->bindParam(":Serv_name",$Serv_name);
+$stm->bindParam(":categories",$categories);
 $stm->bindParam(":Serv_description",$Serv_description);
 $stm->bindParam(":Serv_price",$Serv_price);
-$stm->bindParam(":Serv_img",$Serv_img);
+$stm->bindParam(':Serv_img',$nombreArchivo);
 $stm->execute();
+
 }
 
 ?>
+
 
 
 
@@ -30,13 +47,25 @@ $stm->execute();
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="" method="post">
+      <form action="" method="post" enctype="multipart/form-data">
       <div class="modal-body">
         <label for="">Nombre</label>
         <input type="text" class="form-control" name="Serv_name" placeholder="Ingresar datos">
         <br>
 
-        <label for="">Descripcion</label>
+        <label for="">Categoría</label>
+        <select type="text" class="form-control" name="categories" value="" placeholder="Selecciona la categoría">
+          <option value="" disabled selected>Seleccione la categoría</option>
+          <option value="Cabello">Cabello</option>
+          <option value="Tratamientos">Tratamientos capilares</option>
+          <option value="Manos">Manos</option>
+          <option value="Pies">Pies</option>
+          <option value="Pestanas">Pestañas</option>
+          <option value="Maquillaje">Maquillaje</option>
+          <option value="Rostro">Rostro</option>
+          <option value="Cuerpo">Cuerpo</option>
+        </select>
+        <label for="">Descripción</label>
         <input type="text" class="form-control" name="Serv_description" placeholder="Ingresar datos">
         <br>
 
@@ -44,8 +73,8 @@ $stm->execute();
         <input type="text" class="form-control" name="Serv_price" placeholder="Ingresar datos">
         <br>
 
-        <label for="">Imagen</label>
-        <input type="file" accept="image/png, image/jpeg, image/jpg" class="form-control" name="Serv_img" placeholder="Cargar Imagen" value="<?php echo $Serv_img; ?>">
+        <label for="Serv_img">Imagen</label>
+        <input type="file" accept="image/*" class="form-control" name="Serv_img" placeholder="Cargar Imagen">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

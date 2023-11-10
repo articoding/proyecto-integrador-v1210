@@ -76,10 +76,11 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Formularios</h6>
-                        <a class="collapse-item" href="../../buttons.php">Buttons</a>
-                        <a class="collapse-item" href="../../cards.php">Cards</a>
                         <a class="collapse-item active" href="index.php">Servicios</a>
                         <a class="collapse-item" href="../Contacto/index.php">Contacto</a>
+                        <a class="collapse-item" href="../Nosotros/index.php">Nosotros</a>
+                        <a class="collapse-item" href="../Usuarios/index.php">Usuarios</a>
+
                     </div>
                 </div>
             </li>

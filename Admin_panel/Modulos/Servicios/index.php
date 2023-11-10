@@ -36,8 +36,9 @@ header("location: index.php");
     <thead class="table table-white">
       <tr>
         <th scope="col">ID</th>
+        <th scope="col">Categoría</th>
         <th scope="col">Nombre</th>
-        <th scope="col">Descripcion</th>
+        <th scope="col">Descripción</th>
         <th scope="col">Precio</th>
         <th scope="col">Imagen</th>
         <th scope="col">Acciones</th>
@@ -47,11 +48,13 @@ header("location: index.php");
       <?php foreach($services as $servicio) { ?>
       <tr class="">
         <td scope="row"><?php echo $servicio['idServices']; ?></td>
+        <td><?php echo $servicio['categories']; ?></td>
         <td><?php echo $servicio['Serv_name']; ?></td>
         <td><?php echo $servicio['Serv_description']; ?></td>
         <td><?php echo $servicio['Serv_price']; ?></td>
         <td><?php echo $servicio['Serv_img']; ?></td>
         <td>
+
 
         <a href="edit.php?idServices=<?php echo $servicio['idServices']; ?>" class="btn btn-success">Editar</a>
         <a href="index.php?idServices=<?php echo $servicio['idServices']; ?>" class="btn btn-danger">Eliminar</a>

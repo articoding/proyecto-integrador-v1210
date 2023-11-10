@@ -61,9 +61,9 @@
             <input type="text" class="form-control" name="fecharegistro" value="<?php echo $fecharegistro; ?>" placeholder="Ingresa tu fecha de registro" >
         </div>
         <div class="modal-footer">
-            <a href="index.php" class="btn btn-danger">Cancelar</a>     
+        <a href="index.php" class="btn btn-danger">Cancelar</a>     
             <button type="submit" class="btn btn-primary">Actualizar</button>
         </div>
     </form>
 
-<?php include("../../Templates/footer2.php"); ?>
+<?php include("../../Templates/footer.php"); ?>

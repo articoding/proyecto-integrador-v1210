@@ -65,12 +65,10 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Formularios</h6>
-                        <a class="collapse-item" href="buttons.php">Buttons</a>
-                        <a class="collapse-item" href="cards.php">Cards</a>
                         <a class="collapse-item" href="Modulos/Servicios/index.php">Servicios</a>
                         <a class="collapse-item" href="Modulos/Contacto/index.php">Contacto</a>
-
-
+                        <a class="collapse-item" href="Modulos/Nosotros/index.php">Nosotros</a>
+                        <a class="collapse-item" href="Modulos/Usuarios/index.php">Usuarios</a>
                     </div>
                 </div>
             </li>
