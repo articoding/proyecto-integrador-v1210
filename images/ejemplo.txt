@@ -1,150 +1,19 @@
-<?php   
-
-include("../../conexion.php");
-
-if (isset($_GET['idServices'])){
-
-  $txtidServices=(isset($_GET['idServices'])?$_GET['idServices']:"");
-  $stm=$conexion->prepare("SELECT * FROM services WHERE idServices=:txtidServices");
-  $stm->bindParam(":txtidServices",$txtidServices);
-  $stm->execute();
-  $registro=$stm->fetch(PDO::FETCH_LAZY);
-  $Serv_name=$registro['Serv_name'];
-  $Serv_description=$registro['Serv_description'];
-  $Serv_price=$registro['Serv_price'];
-  $Serv_img=$registro['Serv_img'];
-  }
-  
-  if ($_POST) {
-    $txtidServices=(isset($_POST['txtidServices'])?$_POST['txtidServices']:"");
-    $Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
-    $Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
-    $Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
-    $Serv_img=(isset($_POST['Serv_img'])?$_POST['Serv_img']:"");
-    
-    $stm=$conexion->prepare("UPDATE services SET Serv_name=:Serv_name,Serv_description=:Serv_description,Serv_price=:Serv_price,Serv_img=:Serv_img WHERE idServices=:txtidServices");
-    $stm->bindParam(":Serv_name",$Serv_name);
-    $stm->bindParam(":Serv_description",$Serv_description);
-    $stm->bindParam(":Serv_price",$Serv_price);
-    $stm->bindParam(":Serv_img",$Serv_img);
-    $stm->bindParam(":txtidServices",$txtidServices);
-    
-    $stm->execute();
-    header("location: index.php");
-    }
-  
-  
-
-?>
-
- <?php } ?>
-
-
 <?php
-    $con = new mysqli("localhost", "root", "", "db_pi");
-    
-        $Serv_name=$_POST["Serv_name"];
-        $Serv_description=$_POST["Serv_description"];
-        $Serv_price=$_POST["Serv_price"];
-        $Serv_img='';
-        if (isset($_FILES['Serv_img'])) {
-            $file=$_FILES["Serv_img"];
-            $nombre=$file["name"];
-            $tipo=$file["type"];
-            $ruta_provisional=$file["tmp_name"];
-            $size=$file["size"];
-            $dimensiones=getimagesize($ruta_provisional);
-            $width= $dimensiones[0];
-            $height= $dimensiones[1];
-            $carpeta="images/Servicios/";
-            if ($tipo !== "image/jpg" && $tipo !== "image/JPG" && $tipo !== "image/jpeg" && $tipo !== "image/png" && $tipo !== "image/gif") 
-            {
-                echo "error, esto no es un archivo valido";
-            }
-            else if ($size >3*1024*1024) {
-                echo "El tamaño máximo permitido es de 3MB";
-            }
-            else {
-                $src =$carpeta.$nombre;
-                move_uploaded_file($ruta_provisional,$src);
-                $foto="images/Servicios".$nombre;
-            }
-        }
-        $query=mysqli_query($con,"INSERT INTO catalogo (idServices, Serv_name, Serv_description, Serv_price, Serv_img) VALUES('','$Serv_name','$Serv_description','$Serv_price','$Serv_img')");
-        header("Location:index.php");
-    
+@include 'config.php';
+
+$select = mysqli_query($conn, "SELECT * FROM productos");
 ?>
+<div class="container-fluid">
+    <div class="row">
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Serv_name = $_POST["Serv_name"];
-    $Serv_description = $_POST["Serv_description"];
-    $Serv_price = $_POST["Serv_price"];
-    
-    // Manejar la imagen
-    $Serv_img = $_FILES["Serv_img"];
-    $nombreServimg = $Serv_img["name"];
-    $rutaServimg = "../../../images/Servicios/" . $nombreServimg; // Establece la ruta donde se guardará la imagen
-    
-    // Mueve el archivo de imagen al destino
-    move_uploaded_file($Serv_img["tmp_name"], $rutaServimg);
-    
-    // Guardar los datos en la base de datos usando PDO
-    $dsn = 'mysql:host=localhost;dbname=db_pi';
-    $usuario = 'root';
-    $contrasena = '';
-    
-    try {
-        $conexion = new PDO($dsn, $usuario, $contrasena);
-        $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        // Insertar datos en la base de datos
-        $query = "INSERT INTO services (Serv_name, Serv_description, Serv_price, Serv_img) VALUES (:Serv_name, :Serv_description, :Serv_price, :Serv_img)";
-        $stmt = $conexion->prepare($query);
-        $stmt->bindParam(':Serv_name', $Serv_name);
-        $stmt->bindParam(':Serv_description', $Serv_description);
-        $stmt->bindParam(':Serv_price', $Serv_price);
-        $stmt->bindParam(':Serv_img', $rutaServimg);
-        $stmt->execute();
-        
-        echo "Servicio guardado correctamente.";
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
-    }
-}
-?>
-
-
-  <?php
-
-if ($_POST) {
-
-$Serv_name=(isset($_POST['Serv_name'])?$_POST['Serv_name']:"");
-$Serv_description=(isset($_POST['Serv_description'])?$_POST['Serv_description']:"");
-$Serv_price=(isset($_POST['Serv_price'])?$_POST['Serv_price']:"");
-$Serv_img=(isset($_FILES['Serv_img']['name'])?$_FILES['Serv_img']['name']:"");
-
-$stm=$conexion->prepare("INSERT INTO services(idServices,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
-
-$stm->bindParam(":Serv_name",$Serv_name);
-$stm->bindParam(":Serv_description",$Serv_description);
-$stm->bindParam(":Serv_price",$Serv_price);
-$stm->bindParam(":Serv_img",$Serv_img);
-$stm->execute();
-
-
-$fecha = new DateTime();
-$nombreArchivo=($Serv_img!="")?$fecha->getTimestamp()."_".$_FILES["Serv_img"]["name"]:"imagen.png";
-
-$tmpimagen=$_FILES["Serv_img"]["tmp_name"];
-if($tmpimagen!=""){
-
-  move_uploaded_file($tmpimagen,"../../../images/Servicios/".$nombreArchivo);
-
-}
-
-$stm->bindParam(':Serv_img',$nombreArchivo);
-$stm->execute();
-
-}
-
+      <?php while($row = mysqli_fetch_assoc($select)){ ?>
+         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="glasses_box" style="padding: 0px 0px 30px 0px;">
+               <figure><img src="uploaded_img/<?php echo $row['image']; ?>" alt=""></figure>
+               <br>
+               <strong style="font-size: 1.2rem; color: black;"><?php echo $row['name']; ?></strong>
+            </div>
+         </div>
+      <?php } ?>
+   </div>
+</div>

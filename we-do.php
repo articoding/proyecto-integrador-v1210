@@ -1,8 +1,9 @@
 <?php
+
 // Configuración de la base de datos
-$dsn = 'mysql:host=localhost;dbname=easyappointments';
-$usuario = 'easyappointments';
-$contrasena = 'easy_32point';
+$dsn = 'mysql:host=localhost;dbname=db_pi';
+$usuario = 'root';
+$contrasena = '';
 
 try {
     // Crear una nueva instancia de PDO
@@ -30,6 +31,8 @@ try {
     echo 'Error: ' . $e->getMessage();
 }
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -102,149 +105,56 @@ try {
                   <div class="row">
                      <div class="col-lg-12">
                         <div class="heading-title text-center">
-                           <h2>Nuestros servicios</h2>
-                           <p>Lizbeth Hair Salon te ofrece los siguiente servicios </p>
+                           <h2>¡Descubre la excelencia en belleza!</h2>
+                           <p>En Lizbeth Hair Salon te ofrecemos una amplia variedad de servicios </p>
                         </div>
                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-lg-12">
+               
+               
+                  <div class="col-lg-12">
+
+
                         <div class="special-menu text-center">
                            <div class="button-group filter-button-group">
                               <button class="active" data-filter="*">Todas</button>
-                              <button data-filter=".drinks">Piel</button>
-                              <button data-filter=".lunch">Manos</button>
-                              <button data-filter=".dinner">Cabello</button>
-                              <button data-filter=".nails">Cuerpo</button>
+                              <button data-filter=".Cabello">Cabello</button>
+                              <button data-filter=".Tratamientos">Tratamientos capilares</button>
+                              <button data-filter=".Manos">Manos</button>
+                              <button data-filter=".Pies">Pies</button>
+                              <button data-filter=".Pestanas">Pestañas</button>
+                              <button data-filter=".Maquillaje">Maquillaje</button>
+                              <button data-filter=".Rostro">Rostro</button>
+                              <button data-filter=".Cuerpo">Cuerpo</button>
 
                            </div>
                         </div>
                      </div>
                   </div>
-   
-                  <!--<div class="row special-list">
-                     <div class="col-lg-4 col-md-6 special-grid drinks">
-                        <div class="gallery-single fix">
-                           <img src="<?php echo $imagen; ?>" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4><?php echo $row['Serv_name'] ?></h4>
-                              <p><?php echo $row['Serv_description'] ?></p>
-                              <h5><?php echo $row['Serv_price'] ?></h5>
-                           </div>
-                        </div>
-                     </div>-->
+
+                  
+                  <div class="row special-list">
+                     <?php foreach ($resultados as $servicio) { ?>
+                     <div class="col-lg-4 col-md-6 special-grid <?php echo $servicio['categories']; ?>">
+                     <div class="gallery-single fix">
+                     <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
+                     <div class="why-text">;
+                     <h4><?php echo $servicio['Serv_name']; ?></h4>
+                     <p><?php echo $servicio['Serv_description']; ?></p>
+                     <h5><?php echo $servicio['Serv_price']; ?></h5>
+                     </div>
+                     
+                     </div>
+                     </div>
+                     <?php } ?>
+                     </div>
+                     
                     
-
-    <div class="row special-list">
-    <?php foreach ($resultados as $servicio) { ?>
-    <div class="col-lg-4 col-md-6 special-grid drinks">
-    <div class="gallery-single fix">
-   <img src="./images/Servicios/<?php echo $servicio['Serv_img']; ?>" class="img-fluid" alt="image">
-     <div class="why-text">;
-    <h4><?php echo $servicio['Serv_name']; ?></h4>
-    <p><?php echo $servicio['Serv_description']; ?></p>
-    <h5><?php echo $servicio['Serv_price']; ?></h5>
-    </div>
-    
-     </div>
-     </div>
-     <?php }
-?>
-    </div>
-
-
-
-                     <!--<div class="col-lg-4 col-md-6 special-grid drinks">
-                        <div class="gallery-single fix">
-                           <img src="images/img-02.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Drinks 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $9.79</h5>
-                           </div>
-                        </div>
-                     </div>
                      
-                     <div class="col-lg-4 col-md-6 special-grid drinks">
-                        <div class="gallery-single fix">
-                           <img src="images/img-03.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Drinks 3</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $10.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid lunch">
-                        <div class="gallery-single fix">
-                           <img src="images/img-04.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Lunch 1</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $15.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid lunch">
-                        <div class="gallery-single fix">
-                           <img src="images/img-05.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Lunch 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $18.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid lunch">
-                        <div class="gallery-single fix">
-                           <img src="images/img-06.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Lunch 3</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $20.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid dinner">
-                        <div class="gallery-single fix">
-                           <img src="images/img-07.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 1</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $25.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid dinner">
-                        <div class="gallery-single fix">
-                           <img src="images/img-08.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 2</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $22.79</h5>
-                           </div>
-                        </div>
-                     </div>
-                     
-                     <div class="col-lg-4 col-md-6 special-grid dinner">
-                        <div class="gallery-single fix">
-                           <img src="images/img-09.jpg" class="img-fluid" alt="Image">
-                           <div class="why-text">
-                              <h4>Special Dinner 3</h4>
-                              <p>Sed id magna vitae eros sagittis euismod.</p>
-                              <h5> $24.79</h5>
-                           </div>
-                        </div>
-                     </div>-->
-                     
+                    
                   </div>
-                 
-               </div>
+                  </div>
             </div>
            <!--end what we do-->  
 
@@ -298,11 +208,18 @@ try {
             <script src="js/jquery-3.0.0.min.js"></script>
             <script src="js/script.js"></script>
             <script src="js/custom1.js"></script>
+            <script src="js/buttons.js"></script>
+
 
             <!-- sidebar -->
             <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
             <script src="js/custom.js"></script>
-            <?php include("Admin_panel/Modulos/Servicios/create.php"); ?>
+            <script src="js/isotope.min.js"></script>
+            <script src="js/baguetteBox.min.js"></script>
+            <script src="js/images-loded.min.js"></script>
+            <script src="js/jquery.superslides.min.js"></script>
+
+
          </body>
 </html>
 

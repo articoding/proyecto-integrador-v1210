@@ -7,7 +7,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Inicio de sesión - Lizbeth Hair Salon</title>
     <link rel="stylesheet" href="css/styleIS.css">
     <link rel="icon" href="images/fevicon.jpg" type="image/jpg" />
 
@@ -28,7 +28,7 @@
 <!--<div class="recordar">¿Olvidó su contraseña?</div>-->
 <input type="submit" id="btn" value="Login" name="submit">
 <div class="registrarse">
-    Quiero hacer el <a href="register.html">registro</a>
+    Quiero hacer el <a href="register.php">registro</a>
 </div>
     </form>
   </div>

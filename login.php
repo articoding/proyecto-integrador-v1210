@@ -1,4 +1,4 @@
-    <?php
+<?php
         include("connection.php");
         if(isset($_POST['submit'])){
             $user_email = $_POST['email'];
@@ -20,7 +20,7 @@
             else{
                 echo '<script>
                     window.location.href = "signin.php";
-                    alert("Login failed. Invalid Email or Password");
+                    alert("Inicio de sesión fallido. Correo y/o contraseña inválidos. Intente de nuevo.");
                 </script>';
         
             }
