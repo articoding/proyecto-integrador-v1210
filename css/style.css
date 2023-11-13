@@ -1337,8 +1337,8 @@ text-transform: capitalize;
 .why-text h4{
 	color: #ffffff;
 	font-size: 24px;
-	font-weight: 500;
-	font-family: 'Arbutus Slab', serif;
+	font-weight: bolder;
+	font-family: 'Karla', serif;
 }
 .why-text p{
 	color: #ffffff;

@@ -88,7 +88,7 @@
                </div>
                <div class="col-md-6">
                   <div class="about_img">
-                     <figure><img src="images/about.jpg" alt="#"/></figure>
+                     <figure><img src="images/indexabt.jpg" alt="#"/></figure>
                   </div>
                </div>
             </div>
@@ -122,7 +122,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog2.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
+                              <figure><img src="images/keratin.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -155,7 +155,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog5.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
+                              <figure><img src="images/eyelashes.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
                            </div>
                            <div class="meet">
                               
