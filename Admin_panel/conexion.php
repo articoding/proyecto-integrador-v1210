@@ -1,9 +1,9 @@
 <?php
 
 $servidor = "localhost";
-$db = "db_pi";
-$username = "root";
-$password = "";
+$db = "easyappointments";
+$username = "easyappointments";
+$password = "easy_32point";
 
 try {
   $conexion = new PDO("mysql:host=$servidor;dbname=$db",$username,$password);

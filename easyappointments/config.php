@@ -30,7 +30,7 @@ class Config {
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
 
-    const BASE_URL      = 'http://localhost/ProyectoIntegrador/easyappointments';
+    const BASE_URL      = 'http://localhost/proyecto-integrador-v1210/easyappointments';
     const LANGUAGE      = 'english';
     const DEBUG_MODE    = FALSE;
 

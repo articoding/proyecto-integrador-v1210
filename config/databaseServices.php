@@ -3,9 +3,9 @@
 class Database {
 
 private $hostname = "localhost";
-private $database = "db_pi";
-private $username = "root";
-private $password = "";
+private $database = "easyappointments";
+private $username = "easyappointments";
+private $password = "easy_32point";
 private $charset = "utf8";
 
 function conectar() {

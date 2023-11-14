@@ -8,7 +8,7 @@ $user_password = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
 
 
 
-$conn = new mysqli('localhost', 'root', '', 'db_pi');
+$conn = new mysqli('localhost', 'easyappointments', 'easy_32point', 'easyappointments');
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 } else {
