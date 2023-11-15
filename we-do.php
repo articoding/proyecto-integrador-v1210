@@ -89,7 +89,7 @@ try {
                   <a href="about.php">Nosotros</a>
                   <a href="we-do.php">Servicios</a>
                   <a href="contact.php">Contacto</a>
-                  <a href="register.php">Regístrate</a>
+                  <a href="easyappointments/" target="_blank">Citas</a>
                   <a href="signin.php">Iniciar sesión</a>
                </nav>
             

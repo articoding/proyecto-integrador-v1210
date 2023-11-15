@@ -2,7 +2,7 @@
     <div id="footer-content" class="col-12 col-sm-8">
         <img class="mr-1" src="<?= base_url('assets/img/logo-16x16.png') ?>" alt="Easy!Appointments Logo">
         <a href="https://easyappointments.org">
-            Easy!Appointments
+            Citas Online
         </a>
 
         v<?= config('version') ?>
@@ -12,11 +12,8 @@
 
         |
 
-        <img class="mx-1" src="<?= base_url('assets/img/alextselegidis-logo-16x16.png') ?>" alt="Alex Tselegidis Logo">
-        <a href="https://alextselegidis.com">
-            Alex Tselegidis
-        </a>
-        &copy; <?= date('Y') ?> - Software Development
+        
+        &copy; <?= date('Y') ?> - Lizbeth Hair Salon
 
         |
 
