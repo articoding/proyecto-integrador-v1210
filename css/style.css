@@ -1306,7 +1306,7 @@ text-transform: capitalize;
 
 .gallery-single {
      width: 100%; /* Set the width of the container */
-     padding-bottom: 75%; /* 4:3 aspect ratio (3 divided by 4 gives 0.75 or 75%) */
+     padding-bottom: 95%;
      overflow: hidden;
 
 }
