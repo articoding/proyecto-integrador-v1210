@@ -25,12 +25,10 @@ if(isset($_GET['idContact'])){
 
 <div class="table-responsive">
     <table class="table table-white">
-        <thead class="table table-white">
+        <thead class="table table-dark">
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Sociales</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Email</th>
                 <th scope="col">Fecha de registro</th>
@@ -43,9 +41,7 @@ if(isset($_GET['idContact'])){
             <?php foreach($contact_us as $contact) { ?>
             <tr class="">
                 <td scope="row"><?php echo $contact['idContact']; ?></td>
-                <td scope="row"><?php echo $contact['contact_name']; ?></td>
-                <td><?php echo $contact['contact_ubication']; ?></td>
-                <td><?php echo $contact['contact_social']; ?></td>
+                <td scope="row"><?php echo $contact['contact_name']; ?></td> 
                 <td><?php echo $contact['contact_phone']; ?></td>
                 <td><?php echo $contact['contact_email']; ?></td>
                 <td><?php echo $contact['contact_register']; ?></td>

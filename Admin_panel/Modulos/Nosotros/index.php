@@ -23,7 +23,7 @@ if(isset($_GET['idAbout'])){
 
 <div class="table-responsive">
     <table class="table table-white">
-        <thead class="table table-white">
+        <thead class="table table-dark">
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Historia</th>
