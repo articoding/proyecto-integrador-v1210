@@ -49,8 +49,8 @@ $stm->execute();
         <input type="text" class="form-control" name="Serv_name" placeholder="Ingresar datos">
         <br>
 
-        <label for="">Categoría</label>
-        <select type="text" class="form-control" name="categories" value="" placeholder="Selecciona la categoría">
+        <label for="">Categoría</label> <br>
+        <select type="text" class="form-control" name="categories" value="" placeholder="Selecciona la categoría"> <br>
           <option value="" disabled selected>Seleccione la categoría</option>
           <option value="Cabello">Cabello</option>
           <option value="Tratamientos">Tratamientos capilares</option>
@@ -60,16 +60,16 @@ $stm->execute();
           <option value="Maquillaje">Maquillaje</option>
           <option value="Rostro">Rostro</option>
           <option value="Cuerpo">Cuerpo</option>
-        </select>
-        <label for="">Descripción</label>
+        </select> <br>
+        <label for="">Descripción</label><br>
         <input type="text" class="form-control" name="Serv_description" placeholder="Ingresar datos">
         <br>
 
-        <label for="">Precio</label>
+        <label for="">Precio</label> <br>
         <input type="text" class="form-control" name="Serv_price" placeholder="Ingresar datos">
         <br>
 
-        <label for="Serv_img">Imagen</label>
+        <label for="Serv_img">Imagen</label> <br>
         <input type="file" accept="image/*" class="form-control" name="Serv_img" placeholder="Cargar Imagen">
       </div>
       <div class="modal-footer">
