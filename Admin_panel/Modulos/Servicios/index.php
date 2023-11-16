@@ -52,8 +52,8 @@ header("location: index.php");
         <td><?php echo $servicio['Serv_name']; ?></td>
         <td><?php echo $servicio['Serv_description']; ?></td>
         <td><?php echo $servicio['Serv_price']; ?></td>
-        <td><?php echo $servicio['Serv_img']; ?></td>
-        <td>
+        <!-- Mostrar la imagen usando la etiqueta <img> -->
+        <td><img src="../../../images/Servicios/<?php echo $servicio['Serv_img']; ?>" alt="Imagen del Servicio" style="max-width: 50px;"></td>        <td>
 
 
         <a href="edit.php?idServices=<?php echo $servicio['idServices']; ?>" class="btn btn-success">Editar</a>
