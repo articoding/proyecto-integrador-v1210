@@ -48,10 +48,10 @@ class Config {
     // ------------------------------------------------------------------------
 
     const GOOGLE_SYNC_FEATURE   = TRUE; // Enter TRUE or FALSE
-    const GOOGLE_PRODUCT_NAME   = 'My Project 2921';
-    const GOOGLE_CLIENT_ID      = '336992806363-dh1v77kal03ssnikh88eej1bopkt91ho.apps.googleusercontent.com';
-    const GOOGLE_CLIENT_SECRET  = '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';
-    const GOOGLE_API_KEY        = 'AIzaSyAeiuMtT_RZyLl6cuclyL4_ONF8ysmc9Ck';
+    const GOOGLE_PRODUCT_NAME   = '';
+    const GOOGLE_CLIENT_ID      = '';
+    const GOOGLE_CLIENT_SECRET  = '';
+    const GOOGLE_API_KEY        = '';
 }
 
 /* End of file config.php */

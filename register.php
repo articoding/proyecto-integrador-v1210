@@ -17,7 +17,7 @@
       <h1>Registro</h1>
       <form method="post" action="connect.php">
         <div class="username">
-          <input type="text" required id="user_name" name="user_name" placeholder="Nombre">
+          <input type="text" required id="username" name="username" placeholder="Nombre">
           <!--<label for="user_name">Nombre</label>-->
         </div>
         <div class="username">
