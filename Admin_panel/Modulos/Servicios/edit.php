@@ -63,6 +63,8 @@ if ($_POST) {
 <form action="" method="post" enctype="multipart/form-data">
         <input type="hidden" class="form-control" name="txtidServices" value="<?php echo $txtidServices; ?>">
 
+        
+
         <label for="categories">Categoría</label>
         <select type="text" class="form-control" name="categories" value="<?php echo $categories; ?>" placeholder="Selecciona la categoría">
           <option value="" disabled selected>Seleccione la categoría</option>
@@ -88,7 +90,16 @@ if ($_POST) {
         <input type="text" class="form-control" name="Serv_price" placeholder="Ingresar datos" value="<?php echo $Serv_price; ?>">
         <br>
 
-        <label for="Serv_img">Imagen</label>
+        <!-- Mostrar la imagen actual -->
+    <label for="currentImage">Imagen Actual</label>
+    <?php if (!empty($Serv_img)) : ?>
+        <img src="../../../images/Servicios/<?php echo $Serv_img; ?>" alt="Imagen Actual" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;" >
+    <?php else : ?>
+        <p>No hay imagen actual.</p>
+    <?php endif; ?>
+    <br>
+
+        <label for="Serv_img">Actualizar imagen</label>
         <input type="file" accept="image/*" class="form-control" name="Serv_img" placeholder="Cargar Imagen" value="<?php echo $Serv_img; ?>">
       </div>
       <div class="modal-footer">
