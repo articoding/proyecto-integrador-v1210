@@ -509,7 +509,7 @@ ul.social_icon li a:hover {
 
 .read_more {
      font-size: 17px;
-     background-color: #2e2d2d;
+     background-color: var(--black);
      color: #fff;
      padding: 12px 0px;
      width: 100%;
