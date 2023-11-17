@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="../images/fevicon.jpg" type="image/jpg" />
+
 
     <title>Lizbeth Hair Salon - Panel de Administrador</title>
 

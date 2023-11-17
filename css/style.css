@@ -1322,7 +1322,7 @@ text-transform: capitalize;
 
 .gallery-single {
      width: 100%; /* Set the width of the container */
-     padding-bottom: 95%;
+     padding-bottom: 100%;
      overflow: hidden;
 
 }
