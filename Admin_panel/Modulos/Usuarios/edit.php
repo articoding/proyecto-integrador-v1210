@@ -61,8 +61,8 @@
             <label for="">Tipo de usuario</label>
             <select type="text" class="form-control" name="tipousuario" value="<?php echo $tipousuario; ?>" placeholder="Actualiza tu tipo de usuario" >
                 <option value="" disabled selected>Cambia el tipo de usuario</option>
-                <option value="admin<?php if ($tipousuario == 'admin') echo 'selected';   ?> ">Administrador</option>
-                <option value="user <?php if ($tipousuario == 'user') echo 'selected';   ?>">Usuario</option>
+                <option value="admin">Administrador</option>
+                <option value="user">Usuario</option>
             </select>
 
             <div class="modal-footer">
