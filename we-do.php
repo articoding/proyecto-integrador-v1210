@@ -1,9 +1,9 @@
 <?php
 
 // Configuración de la base de datos
-$dsn = 'mysql:host=localhost;dbname=easyappointments';
-$usuario = 'easyappointments';
-$contrasena = 'easy_32point';
+$dsn = 'mysql:host=localhost;dbname=lizbethh_easyappointments';
+$usuario = 'lizbethh';
+$contrasena = 'Conejabolita183$';
 
 try {
     // Crear una nueva instancia de PDO

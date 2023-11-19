@@ -121,7 +121,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog1.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
+                              <figure><img src="images/blog1.jpg" alt="#" class="enlarge-image"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -131,7 +131,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/keratin.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
+                              <figure><img src="images/keratin.jpg" alt="#" class="enlarge-image"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -141,30 +141,7 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog3.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
-                           </div>
-                           <div class="meet">
-                              
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-md-4">
-                        <div id="exp" class="experts_box">
-                           <div class="experts_img">
-                              <figure><img src="images/blog4.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
-                           </div>
-                           <div class="meet">
-                              
-                           </div>
-                        </div>
-                     </div>
-
-
-                     <div class="col-md-4">
-                        <div id="exp" class="experts_box">
-                           <div class="experts_img">
-                              <figure><img src="images/eyelashes.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
+                              <figure><img src="images/blog3.jpg" alt="#" class="enlarge-image"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -175,7 +152,30 @@
                      <div class="col-md-4">
                         <div id="exp" class="experts_box">
                            <div class="experts_img">
-                              <figure><img src="images/blog6.jpg" alt="#" onclick="showEnlarged(this)"/></figure>
+                              <figure><img src="images/blog4.jpg" alt="#" class="enlarge-image"/></figure>
+                           </div>
+                           <div class="meet">
+                              
+                           </div>
+                        </div>
+                     </div>
+
+
+                     <div class="col-md-4">
+                        <div id="exp" class="experts_box">
+                           <div class="experts_img">
+                              <figure><img src="images/eyelashes.jpg" class="enlarge-image"/></figure>
+                           </div>
+                           <div class="meet">
+                              
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-md-4">
+                        <div id="exp" class="experts_box">
+                           <div class="experts_img">
+                              <figure><img src="images/blog6.jpg" alt="#" class="enlarge-image"/></figure>
                            </div>
                            <div class="meet">
                               
@@ -185,12 +185,11 @@
                      </div>
                   </div>
                   <div id="enlarged_image_modal" class="modal" onclick="closeEnlarged()">
-                     <span class="close" onclick="closeEnlarged()">&times;</span>
-                     <img class="modal-content" id="enlarged_image">
-                     <a class="prev" onclick="changeImage(-1)">&#10094;</a>
-                     <a class="next" onclick="changeImage(1)">&#10095;</a>
-                     <span class="exit-button" onclick="closeEnlarged()">X</span>
-
+                        <span class="close" onclick="closeEnlarged()">&times;</span>
+                        <img class="modal-content" id="enlarged_image">
+                        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+                        <a class="next" onclick="changeImage(1)">&#10095;</a>
+                        <span class="exit-button" onclick="closeEnlarged()">X</span>
                   </div>
                </div>
             </div>
@@ -265,33 +264,46 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script>
-         // Function to display the clicked image in an enlarged view
+         document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('enlarged_image_modal');
+            const modalImg = document.getElementById('enlarged_image');
+            const closeBtn = document.querySelector('.close');
+            const exitBtn = document.querySelector('.exit-button');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const images = document.querySelectorAll('.enlarge-image');
+            let currentImageIndex = 0;
 
-         let currentImageIndex = 0;
-         const images = document.querySelectorAll('.experts_img img');
-         const modalImg = document.getElementById('enlarged_image');
-         const modal = document.getElementById('enlarged_image_modal');
-
-         function showEnlarged(element) {
-            currentImageIndex = Array.from(images).indexOf(element);
-            modal.style.display = 'block';
-            modalImg.src = element.src;
-         }
-
-         function closeEnlarged() {
-            modal.style.display = 'none';
-         }
-
-         function changeImage(n) {
-            currentImageIndex += n;
-            if (currentImageIndex >= images.length) {
-               currentImageIndex = 0;
+            function showEnlarged(index) {
+               currentImageIndex = index;
+               modal.style.display = 'block';
+               modalImg.src = images[currentImageIndex].src;
             }
-            if (currentImageIndex < 0) {
-               currentImageIndex = images.length - 1;
+
+            function closeEnlarged() {
+               modal.style.display = 'none';
             }
-            modalImg.src = images[currentImageIndex].src;
-         }
+
+            function changeImage(n) {
+               currentImageIndex += n;
+               if (currentImageIndex >= images.length) {
+                     currentImageIndex = 0;
+               }
+               if (currentImageIndex < 0) {
+                     currentImageIndex = images.length - 1;
+               }
+               modalImg.src = images[currentImageIndex].src;
+            }
+
+            closeBtn.addEventListener('click', closeEnlarged);
+            exitBtn.addEventListener('click', closeEnlarged);
+            prevBtn.addEventListener('click', () => changeImage(-1));
+            nextBtn.addEventListener('click', () => changeImage(1));
+
+            images.forEach((image, index) => {
+               image.addEventListener('click', () => showEnlarged(index));
+            });
+         });
       </script>
    </body>
 </html>

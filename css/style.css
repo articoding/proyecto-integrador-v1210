@@ -1403,9 +1403,27 @@ text-transform: capitalize;
      max-width: 90%; /* Adjust this value to fit your layout */
      max-height: 90vh; /* Adjust this value to fit your layout */
      animation: fadeIn 0.3s ease;
-
 }
 
+/* Styles for smaller screens (mobile) */
+@media screen and (max-width: 768px) {
+     .modal-content {
+         margin: 10% auto 15%; /* Adjust these values to fit your layout */
+         width: 90%;
+         max-height: 80vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+ 
+     .experts_box .experts_img figure img {
+         max-width: 100%;
+         height: auto;
+     }
+}
+ 
+ 
+     
 
 /* Other styles... */
 
@@ -1476,4 +1494,4 @@ h3.ok {
 h3.bad {
      background-color: lightcoral; /* Background color for error messages */
 }
- 
+

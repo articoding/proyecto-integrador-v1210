@@ -29,9 +29,7 @@
           <!--<label for="user_birthdate">Fecha de nacimiento</label>-->
         </div>
         <div class="username">
-          <input type="text" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
-          "
-          required id="user_email" name="user_email" placeholder="Email">
+          <input type="email" required id="user_email" name="user_email" placeholder="Email">
           <!--<label for="user_email">Correo electronico</label>-->
         </div>
         <div class="username">

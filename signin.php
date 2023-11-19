@@ -17,7 +17,7 @@
 <body>
   <div class="myformulario">
     <h1>Inicio de Sesión</h1>
-    <form name = "form" action="http://localhost/proyecto-integrador-v1210/login.php" method="POST">
+    <form name = "form" action="login.php" method="POST">
       <div class="username">
         <!--<label >Correo</label>-->
         <input type="text" 
@@ -29,7 +29,7 @@
       </div>
 <!--<div class="recordar">¿Olvidó su contraseña?</div>-->
 <input type="submit" id="btn" value="Login" name="submit">
-<div class="registrarse">
+<div class="registrarse registration-container">
     Quiero hacer el <a href="register.php">registro</a>
 </div>
     </form>
