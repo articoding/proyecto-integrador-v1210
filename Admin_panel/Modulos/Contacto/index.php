@@ -8,7 +8,7 @@ $contact_us = $stml->fetchAll(PDO::FETCH_ASSOC);
 
 if(isset($_GET['idContact'])){
     $txtidContact = (isset($_GET['idContact'])?$_GET['idContact']:"");
-    $stm = $conexion->prepare("DELETE FROM contact_us WHERE idContact = :txtidContact");
+    $stm = $conexion->prepare("CALL sp_deletC (:txtidContact)");
     $stm->bindParam(":txtidContact",$txtidContact);
     $stm->execute();
     header("location: index.php");
@@ -31,9 +31,8 @@ if(isset($_GET['idContact'])){
                 <th scope="col">Nombre</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Email</th>
+                <th scope="col">Comentarios</th>
                 <th scope="col">Fecha de registro</th>
-
-
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -41,9 +40,10 @@ if(isset($_GET['idContact'])){
             <?php foreach($contact_us as $contact) { ?>
             <tr class="">
                 <td scope="row"><?php echo $contact['idContact']; ?></td>
-                <td scope="row"><?php echo $contact['contact_name']; ?></td> 
+                <td><?php echo $contact['contact_name']; ?></td> 
                 <td><?php echo $contact['contact_phone']; ?></td>
                 <td><?php echo $contact['contact_email']; ?></td>
+                <td><?php echo $contact['contact_comment']; ?></td>
                 <td><?php echo $contact['contact_register']; ?></td>
                 <td>
                 <a href="edit.php?idContact=<?php echo $contact['idContact']; ?>" class="btn btn-success">Editar</a> <br>

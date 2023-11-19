@@ -5,19 +5,17 @@
 if($_POST){
 
     $nombre = (isset($_POST['nombre']) ? $_POST['nombre'] : "");
-    $direccion = (isset($_POST['direccion']) ? $_POST['direccion'] : "");
-    $sociales = (isset($_POST['sociales']) ? $_POST['sociales'] : "");
     $telefono = (isset($_POST['telefono']) ? $_POST['telefono'] : "");
     $email = (isset($_POST['email']) ? $_POST['email'] : "");
+    $comment = (isset($_POST['comment'])?$_POST['comment']:"");
     $fecharegistro = (isset($_POST['fecharegistro'])?$_POST['fecharegistro']:"");
 
 
-    $stm = $conexion->prepare("INSERT INTO contact_us (contact_name, contact_ubication, contact_social, contact_phone, contact_email, contact_register) VALUES (:nombre, :direccion, :sociales, :telefono, :email, :fecharegistro)");
+    $stm = $conexion->prepare("CALL sp_cretcon (:nombre, :telefono, :email, :comment, :fecharegistro)");
     $stm->bindParam(':nombre', $nombre);
-    $stm->bindParam(':direccion', $direccion);
-    $stm->bindParam(':sociales', $sociales);
     $stm->bindParam(':telefono', $telefono);
     $stm->bindParam(':email', $email);
+    $stm->bindParam(":comment",$comment);
     $stm->bindParam(':fecharegistro', $fecharegistro);
     $stm->execute();
 
@@ -42,16 +40,14 @@ if($_POST){
       <div class="modal-body">
         <label for="">Nombre</label>
         <input type="text" class="form-control" name="nombre" value="" placeholder="Ingresa tu nombre" >
-        <label for="">Dirección</label>
-        <input type="text" class="form-control" name="direccion" value="" placeholder="Ingresa tu dirección" >
-        <label for="">Sociales</label>
-        <input type="text" class="form-control" name="sociales" value="" placeholder="Ingresa tu redes sociales" >
         <label for="">Teléfono</label>
         <input type="text" class="form-control" name="telefono" value="" placeholder="Ingresa tu teléfono" >
         <label for="">Email</label>
         <input type="text" class="form-control" name="email" value="" placeholder="Ingresa tu email">
+        <label for="">Comentario</label>
+        <input type="text" class="form-control" name="comment" value="" placeholder="Ingresa tu Comentario">
         <label for="">Fecha de registro</label>
-        <input type="text" class="form-control" name="fecharegistro" value="" placeholder="Ingresa tu fecha de registro" >
+        <input type="date" class="form-control" name="fecharegistro" value="" placeholder="Ingresa tu fecha de registro" >
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

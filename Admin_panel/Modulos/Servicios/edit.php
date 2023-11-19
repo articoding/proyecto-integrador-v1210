@@ -44,8 +44,8 @@ if ($_POST) {
         $nombreArchivo = $oldImage;
     }
 
-    // Realiza la actualización en la base de datos
-    $stm = $conexion->prepare("UPDATE services SET categories=:categories,Serv_name=:Serv_name, Serv_description=:Serv_description, Serv_price=:Serv_price, Serv_img=:Serv_img WHERE idServices=:txtidServices");
+    // Realiza la actualización en la base de datos mediante un stored procedure
+    $stm = $conexion->prepare("CALL sp_editS (:txtidServices, :categories, :Serv_name, :Serv_description, :Serv_price, :Serv_img)");
     $stm->bindParam(":categories", $categories);
     $stm->bindParam(":Serv_name", $Serv_name);
     $stm->bindParam(":Serv_description", $Serv_description);

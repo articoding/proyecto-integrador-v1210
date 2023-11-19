@@ -17,7 +17,7 @@ if($tmpimagen!=""){
   move_uploaded_file($tmpimagen,"../../../images/Servicios/".$nombreArchivo);
 
 }
-$stm=$conexion->prepare("INSERT INTO services(idServices,categories,Serv_name,Serv_description,Serv_price,Serv_img)VALUES(NULL,:categories,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
+$stm=$conexion->prepare("CALL sp_cs (:categories,:Serv_name,:Serv_description,:Serv_price,:Serv_img)");
 
 $stm->bindParam(":Serv_name",$Serv_name);
 $stm->bindParam(":categories",$categories);

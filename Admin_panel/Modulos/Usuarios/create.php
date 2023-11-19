@@ -9,7 +9,7 @@ if ($_POST) {
         $contrasena = (isset($_POST['contrasena']) ? $_POST['contrasena'] : "");
         $tipousuario = (isset($_POST['tipousuario']) ? $_POST['tipousuario'] : "");
 
-        $stm = $conexion->prepare("INSERT INTO users (username, user_lastname, user_birthdate, user_email, user_password, usertype) VALUES (:nombre, :apellidos, :fechanacimiento, :correo, :contrasena, :tipousuario)");
+        $stm = $conexion->prepare("CALL sp_creatU (:nombre, :apellidos, :fechanacimiento, :correo, :contrasena, :tipousuario)");
         $stm->bindParam(':nombre', $nombre);
         $stm->bindParam(':apellidos', $apellidos);
         $stm->bindParam(':fechanacimiento', $fechanacimiento);
@@ -41,7 +41,7 @@ if ($_POST) {
         <label for="">Apellidos</label>
         <input type="text" class="form-control" name="apellidos" value="" placeholder="Ingresa tus apellidos" >
         <label for="">Fecha de nacimiento</label>
-        <input type="text" class="form-control" name="fechanacimiento" value="" placeholder="Ingresa tu fecha de nacimiento" >
+        <input type="date" class="form-control" name="fechanacimiento" value="" placeholder="Ingresa tu fecha de nacimiento" >
         <label for="">Correo</label>
         <input type="text" class="form-control" name="correo" value="" placeholder="Ingresa tu correo" >
         <label for="">Contraseña</label>
