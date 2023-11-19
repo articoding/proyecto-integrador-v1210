@@ -25,7 +25,7 @@
          $contrasena = (isset($_POST['contrasena'])?$_POST['contrasena']:"");
          $tipousuario = (isset($_POST['tipousuario'])?$_POST['tipousuario']:"");
     
-         $stm = $conexion->prepare("UPDATE users SET username = :nombre, user_lastname = :apellidos, user_birthdate = :fechanacimiento, user_email = :correo, user_password = :contrasena, usertype = :tipousuario WHERE idUsers = :txtidUsuario");
+         $stm = $conexion->prepare("CALL sp_editU (:txtidUsuario, :nombre, :apellidos, :fechanacimiento, :correo, :contrasena, :tipousuario)");
          $stm->bindParam(":txtidUsuario",$txtidUsuario);
          $stm->bindParam(":nombre",$nombre);
          $stm->bindParam(":apellidos",$apellidos);

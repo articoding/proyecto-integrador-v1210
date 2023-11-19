@@ -23,7 +23,7 @@
         $comment = (isset($_POST["comment"])?$_POST["comment"]:"");
         $fecharegistro = (isset($_POST['fecharegistro'])?$_POST['fecharegistro']:"");
 
-        $stm = $conexion->prepare("UPDATE contact_us SET contact_name = :nombre, contact_phone = :telefono, contact_email = :email, contact_comment = :comment, contact_register = :fecharegistro WHERE idContact = :txtidContact");
+        $stm = $conexion->prepare("CALL sp_editC (:txtidContact, :nombre, :telefono, :email, :comment, :fecharegistro)");
         $stm->bindParam(":txtidContact",$txtidContact);
         $stm->bindParam(":nombre",$nombre);
         $stm->bindParam(":telefono",$telefono);

@@ -11,7 +11,7 @@ if($_POST){
     $fecharegistro = (isset($_POST['fecharegistro'])?$_POST['fecharegistro']:"");
 
 
-    $stm = $conexion->prepare("INSERT INTO contact_us (contact_name, contact_phone, contact_email, contact_comment, contact_register) VALUES (:nombre, :telefono, :email, :comment,:fecharegistro)");
+    $stm = $conexion->prepare("CALL sp_cretcon (:nombre, :telefono, :email, :comment, :fecharegistro)");
     $stm->bindParam(':nombre', $nombre);
     $stm->bindParam(':telefono', $telefono);
     $stm->bindParam(':email', $email);

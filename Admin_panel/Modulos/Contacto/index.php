@@ -8,7 +8,7 @@ $contact_us = $stml->fetchAll(PDO::FETCH_ASSOC);
 
 if(isset($_GET['idContact'])){
     $txtidContact = (isset($_GET['idContact'])?$_GET['idContact']:"");
-    $stm = $conexion->prepare("DELETE FROM contact_us WHERE idContact = :txtidContact");
+    $stm = $conexion->prepare("CALL sp_deletC (:txtidContact)");
     $stm->bindParam(":txtidContact",$txtidContact);
     $stm->execute();
     header("location: index.php");
@@ -20,6 +20,9 @@ if(isset($_GET['idContact'])){
 <?php include("../../Templates/header2.php"); ?>
 
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create">
+  Nuevo
+</button>
 
 <div class="table-responsive">
     <table class="table table-white">

@@ -9,7 +9,7 @@ if ($_POST) {
         $contrasena = (isset($_POST['contrasena']) ? $_POST['contrasena'] : "");
         $tipousuario = (isset($_POST['tipousuario']) ? $_POST['tipousuario'] : "");
 
-        $stm = $conexion->prepare("INSERT INTO users (username, user_lastname, user_birthdate, user_email, user_password, usertype) VALUES (:nombre, :apellidos, :fechanacimiento, :correo, :contrasena, :tipousuario)");
+        $stm = $conexion->prepare("CALL sp_creatU (:nombre, :apellidos, :fechanacimiento, :correo, :contrasena, :tipousuario)");
         $stm->bindParam(':nombre', $nombre);
         $stm->bindParam(':apellidos', $apellidos);
         $stm->bindParam(':fechanacimiento', $fechanacimiento);

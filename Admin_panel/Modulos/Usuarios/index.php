@@ -8,7 +8,7 @@ $usuarios = $stml->fetchAll(PDO::FETCH_ASSOC);
 
 if(isset($_GET['idUsers'])){
     $txtidUsuario = (isset($_GET['idUsers'])?$_GET['idUsers']:"");
-    $stm = $conexion->prepare("DELETE FROM users WHERE idUsers = :txtidUsuario");
+    $stm = $conexion->prepare("CALL sp_deletU (:txtidUsuario)");
     $stm->bindParam(":txtidUsuario",$txtidUsuario);
     $stm->execute();
     header("location: index.php");

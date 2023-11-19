@@ -19,8 +19,7 @@ include("../../conexion.php");
         $mision = (isset($_POST['mision'])?$_POST['mision']:"");
         $valores = (isset($_POST['valores'])?$_POST['valores']:"");
 
-        $stm = $conexion->prepare("UPDATE aboutus SET historia = :historia, mision = :mision, valores = :valores WHERE idAbout = :txtidAbout");
-        $stm->bindParam(":txtidAbout",$txtidAbout);
+        $stm = $conexion->prepare("CALL sp_editN (:txtidAbout, :historia, :mision, :valores)");        $stm->bindParam(":txtidAbout",$txtidAbout);
         $stm->bindParam(":historia",$historia);
         $stm->bindParam(":mision",$mision);
         $stm->bindParam(":valores",$valores);

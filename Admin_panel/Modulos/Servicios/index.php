@@ -9,7 +9,7 @@ $services = $stm->fetchAll(PDO::FETCH_ASSOC);
 if (isset($_GET['idServices'])){
 
 $txtidServices=(isset($_GET['idServices'])?$_GET['idServices']:"");
-$stm=$conexion->prepare("DELETE FROM services WHERE idServices=:txtidServices");
+$stm=$conexion->prepare("CALL sp_deleteS (:txtidServices)");
 $stm->bindParam(":txtidServices",$txtidServices);
 $stm->execute();
 header("location: index.php");
